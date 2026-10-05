@@ -1,2 +1,12 @@
+# MacOS
 .DS_Store
+
+# Build output
 build/
+
+# Visual Studio 2022 user files and caches
+*.vcxproj.user
+*.suo
+*.user
+*.docstates
+.vs/
