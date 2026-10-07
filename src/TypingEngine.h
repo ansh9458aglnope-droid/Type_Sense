@@ -3,6 +3,7 @@
 class QKeyEvent;
 #include "c_ds/correction_stack.h"
 #include "database_manager.h"
+#include "database_manager.h"
 
 class TypingEngine : public QObject {
     Q_OBJECT

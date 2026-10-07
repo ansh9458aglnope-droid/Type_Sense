@@ -11,6 +11,7 @@ TypingEngine::TypingEngine(QObject *parent)
 {
     db_->init();
     currentSessionId_ = db_->startSession();
+
 }
 
 TypingEngine::~TypingEngine()
@@ -18,6 +19,7 @@ TypingEngine::~TypingEngine()
     db_->endSession(currentSessionId_);
     correction_stack_destroy(corrections_);
     delete db_;
+
 }
 
 void TypingEngine::handleKeyPress(QKeyEvent* event)
