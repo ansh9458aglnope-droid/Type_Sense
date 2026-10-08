@@ -27,11 +27,11 @@ private:
     TypingEngine* engine_;
     AdaptiveEngine* adaptiveEngine_;
     void updateTypingDisplay();
+     QLabel* typingAreaLabel_;
+QLabel* adaptiveInfoLabel_;
 
-    QLabel* wpmLabel_;        // statistics labels
-    QLabel* accuracyLabel_;
-    QLabel* errorsLabel_;
-
+    QLabel* resultsLabel_;  // combined statistics display
+    
     const Exercise* currentExercise_ = nullptr;
     int cursorIndex_ = 0;
     qint64 startTimeMs_ = 0;
@@ -43,9 +43,7 @@ private:
     QVector<qint64> interKeyIntervals_;
     qint64 lastKeystrokeTimeMs_ = 0;
 
-    // QLabel* targetLabel_;  // removed unused label
-////    QLabel* adaptiveInfoLabel_; // shows adaptive exercise info
-    // QLabel* debugLabel_;        // temporary debug line (removed)
+   
     QLabel* statusLabel_;
     QPushButton* nextButton_;
 };

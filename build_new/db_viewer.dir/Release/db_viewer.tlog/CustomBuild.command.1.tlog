@@ -1,0 +1,28 @@
+^E:\TYPE_SENSE\BUILD_NEW\CMAKEFILES\07FF545BBD6F0B540FCC6B0C3112A0C6\TIMESTAMP_(CONFIG).RULE
+setlocal
+cd E:\Type_Sense\build_new
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen E:/Type_Sense/build_new/CMakeFiles/db_viewer_autogen.dir/AutogenInfo.json Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch E:/Type_Sense/build_new/db_viewer_autogen/timestamp_Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_transform_depfile "Visual Studio 17 2022" MSBuildAdditionalInputs E:/Type_Sense E:/Type_Sense E:/Type_Sense/build_new E:/Type_Sense/build_new E:/Type_Sense/build_new/db_viewer_autogen/deps_Release E:/Type_Sense/build_new/CMakeFiles/d/5ebcb57fd0e3bc7dfb4b0ae33a93591bac65fb959ad1e48c2f43da77e63b48e4.AdditionalInputs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\TYPE_SENSE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Type_Sense -BE:/Type_Sense/build_new --check-stamp-file E:/Type_Sense/build_new/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

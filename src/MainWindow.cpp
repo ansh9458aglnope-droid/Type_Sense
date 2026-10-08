@@ -6,6 +6,7 @@
 #include <QDateTime>
 #include <algorithm>
 #include <QDebug>
+#include <QSet>
 #include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -14,22 +15,40 @@ MainWindow::MainWindow(QWidget *parent)
     qDebug() << "[DEBUG] MainWindow constructor started";
     setFocusPolicy(Qt::StrongFocus);
     auto layout = new QVBoxLayout(this);
+    layout->setContentsMargins(30, 30, 30, 30);
+    layout->setSpacing(20);
+
+    // Dark theme palette
+    QPalette pal = palette();
+    pal.setColor(QPalette::Window, QColor("#121212"));
+    pal.setColor(QPalette::WindowText, Qt::white);
+    setPalette(pal);
+    setAutoFillBackground(true);
     QLabel* headerLabel = new QLabel("TypeSense – Adaptive Typing Tutor", this);
+    QFont headerFont = headerLabel->font();
+    headerFont.setPointSize(18);
+    headerFont.setBold(true);
+    headerLabel->setFont(headerFont);
     layout->addWidget(headerLabel);
 
     // Initialize display labels
-    typingAreaLabel_ = new QLabel(this);
-    typingAreaLabel_->setFont(QFont("monospace", 12));
+typingAreaLabel_ = new QLabel(this);
+typingAreaLabel_->setFont(QFont("Consolas", 14, QFont::Normal));
+    typingAreaLabel_->setStyleSheet("background-color:#1e1e1e; padding:10px; color:white; line-height:1.4em;");
     typingAreaLabel_->setWordWrap(true);
-    wpmLabel_ = new QLabel(this);
-    accuracyLabel_ = new QLabel(this);
-    errorsLabel_ = new QLabel(this);
+    typingAreaLabel_->setTextFormat(Qt::RichText);
+    typingAreaLabel_->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+
+
+    resultsLabel_ = new QLabel(this);
+    statusLabel_ = new QLabel(this);
     adaptiveInfoLabel_ = new QLabel(this);
-    // statusLabel_ and debugLabel_ removed
-// Removed targetLabel widget
-//    layout->addWidget(adaptiveInfoLabel_);
-//    layout->addWidget(statusLabel_);
-//    layout->addWidget(debugLabel_);
+
+    layout->addWidget(typingAreaLabel_);
+    layout->addSpacing(12);
+    layout->addWidget(resultsLabel_);
+    // statusLabel_ is hidden; not added to layout
+    layout->addWidget(adaptiveInfoLabel_);
     nextButton_ = new QPushButton("Next Exercise", this);
     nextButton_->setEnabled(false);
     // Ensure button never receives focus or default activation
@@ -117,7 +136,7 @@ void MainWindow::onEngineKeyPressed(QKeyEvent* event)
         if(elapsedMs>0){
             wpm = ((double)currentExercise_->targetText.length()/5.0)/(elapsedMs/60000.0);
         }
-        QString result = QString("Accuracy: %1%%, Errors: %2, Time: %3s, WPM: %4").arg(QString::number(accuracy,'f',2)).arg(incorrectCount_).arg(elapsedMs/1000.0,'g',2).arg(QString::number(wpm,'f',1));
+        QString result = QString("Accuracy: %1%%    Errors: %2    WPM: %3    Time: %4s").arg(QString::number(accuracy,'f',2)).arg(incorrectCount_).arg(QString::number(wpm,'f',1)).arg(elapsedMs/1000.0,'g',2);
         adaptiveEngine_->recordErrors(errors_);
         // Build weak keys string
         QMap<QChar,int> errMap = adaptiveEngine_->errorCounts();
@@ -128,7 +147,7 @@ void MainWindow::onEngineKeyPressed(QKeyEvent* event)
         for(int i=0;i<list.size() && i<5;i++){
             weakStr += QString(" %1(%2)").arg(list[i].first).arg(list[i].second);
         }
-        statusLabel_->setText(result + "\n" + weakStr);
+        resultsLabel_->setText(result + "\n" + weakStr);
         nextButton_->setEnabled(true);
         updateTypingDisplay();
     }
@@ -148,15 +167,32 @@ void MainWindow::loadNextExercise(){
     startTimeMs_ = QDateTime::currentMSecsSinceEpoch();
     lastKeystrokeTimeMs_=startTimeMs_;
     // Adaptive UI disabled for crash isolation
-    // QString adaptiveInfo;
-    // if(adaptiveEngine_->wasLastExerciseAdaptive()){
-    //     adaptiveInfo = "Adaptive Exercise ✓\n";
-    //     auto keys = adaptiveEngine_->lastWeakKeysTargeted();
-    //     QString keyList;
-    //     for(QChar c:keys){ keyList += c; keyList += ' '; }
-    //     keyList = keyList.trimmed();
-    //     int matches = adaptiveEngine_->lastWeakKeyMatchesCount();
-    //     adaptiveInfo += "Focus keys: " + keyList + "\n";
+    QString adaptiveInfo;
+    if(adaptiveEngine_->wasLastExerciseAdaptive()){
+        adaptiveInfo = "Adaptive Exercise ✓\n";
+        auto keys = adaptiveEngine_->lastWeakKeysTargeted();
+        QSet<QChar> seen;
+        QString keyList;
+        for(QChar c:keys){
+            if (!seen.contains(c)) {
+    seen.insert(c);
+                keyList += c;
+                keyList += ' ';
+            }
+        }
+        keyList = keyList.trimmed();
+        int matches = adaptiveEngine_->lastWeakKeyMatchesCount();
+        adaptiveInfo += "Focus keys: " + keyList + "\n";
+    }else{
+        adaptiveInfo = "Standard Exercise\n";
+        if(adaptiveEngine_->lastWeakKeysTargeted().isEmpty()){
+            adaptiveInfo += "No weak-key focus yet\n";
+        }
+    }
+    // Include difficulty info
+    QString diffLabel = (currentExercise_->difficulty==1) ? "Easy" : ((currentExercise_->difficulty==2) ? "Medium" : "Hard");
+    adaptiveInfo += "Difficulty: " + diffLabel;
+    adaptiveInfoLabel_->setText(adaptiveInfo);
     //     adaptiveInfo += "Weak-key matches: " + QString::number(matches) + "\n";
     // }else{
     //     adaptiveInfo = "Standard Exercise\n";
@@ -199,10 +235,11 @@ void MainWindow::updateTypingDisplay()
         if (i < cursorIndex_) {
             QChar typed = typedChars_.at(i);
             bool correct = correctnessFlags_.at(i);
-            QString color = correct ? "green" : "red";
+            QString color = correct ? "#4caf50" : "#f44336"; // green / red
             html += QString("<span style='color:%1;'>%2</span>").arg(color).arg(QString(typed).toHtmlEscaped());
         } else if (i == cursorIndex_) {
-            html += QString("<span style='background-color:#ffff99;font-weight:bold;'>%1</span>").arg(QString(expected).toHtmlEscaped());
+            // highlight current character with subtle yellow background
+            html += QString("<span style='background-color:#ffeb3b; font-weight:bold;'>%1</span>").arg(QString(expected).toHtmlEscaped());
         } else {
             html += QString("<span style='color:gray;'>%1</span>").arg(QString(expected).toHtmlEscaped());
         }

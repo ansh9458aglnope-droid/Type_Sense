@@ -1,0 +1,10 @@
+^E:\TYPE_SENSE\BUILD_NEW\CMAKEFILES\E36726F1BA93D988AD9AC82B053E14F6\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Type_Sense -BE:/Type_Sense/build_new --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Type_Sense/build_new/TypeSense.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

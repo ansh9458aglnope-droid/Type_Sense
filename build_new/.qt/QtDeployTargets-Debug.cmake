@@ -1,0 +1,7 @@
+set(__QT_DEPLOY_TARGETS "TypeSense;db_viewer")
+set(__QT_DEPLOY_TARGET_TypeSense_FILE E:/Type_Sense/build_new/Debug/TypeSense.exe)
+set(__QT_DEPLOY_TARGET_TypeSense_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_TypeSense_RUNTIME_DLLS E:/qt/6.12.0/msvc2022_64/bin/Qt6Widgetsd.dll;E:/qt/6.12.0/msvc2022_64/bin/Qt6Sqld.dll;E:/qt/6.12.0/msvc2022_64/bin/Qt6Guid.dll;E:/qt/6.12.0/msvc2022_64/bin/Qt6Cored.dll)
+set(__QT_DEPLOY_TARGET_db_viewer_FILE E:/Type_Sense/build_new/Debug/db_viewer.exe)
+set(__QT_DEPLOY_TARGET_db_viewer_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_db_viewer_RUNTIME_DLLS E:/qt/6.12.0/msvc2022_64/bin/Qt6Sqld.dll;E:/qt/6.12.0/msvc2022_64/bin/Qt6Cored.dll)

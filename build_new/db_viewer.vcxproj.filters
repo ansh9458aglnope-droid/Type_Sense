@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Type_Sense\build_new\db_viewer_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\src\db_viewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\build_new\db_viewer_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\build_new\db_viewer_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\build_new\db_viewer_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Type_Sense\build_new\CMakeFiles\07ff545bbd6f0b540fcc6b0c3112a0c6\timestamp_(CONFIG).rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Type_Sense\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\Type_Sense\build_new\db_viewer_autogen\timestamp_Debug" />
+    <None Include="E:\Type_Sense\build_new\db_viewer_autogen\timestamp_Release" />
+    <None Include="E:\Type_Sense\build_new\db_viewer_autogen\timestamp_MinSizeRel" />
+    <None Include="E:\Type_Sense\build_new\db_viewer_autogen\timestamp_RelWithDebInfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{1F15B84B-488E-3317-982C-B6A757804729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CA62E6FC-3A35-3E64-828A-7728E8AB2B99}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

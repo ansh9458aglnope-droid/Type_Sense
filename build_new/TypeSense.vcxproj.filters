@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Type_Sense\build_new\TypeSense_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\src\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\src\TypingEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\src\WebcamHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\src\database_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\src\c_ds\exercise_queue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\src\c_ds\correction_stack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\src\AdaptiveEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\build_new\TypeSense_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\build_new\TypeSense_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Type_Sense\build_new\TypeSense_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Type_Sense\build_new\CMakeFiles\660327e376e0d1dfcae484a983a798c0\timestamp_(CONFIG).rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Type_Sense\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\Type_Sense\build_new\TypeSense_autogen\timestamp_Debug" />
+    <None Include="E:\Type_Sense\build_new\TypeSense_autogen\timestamp_Release" />
+    <None Include="E:\Type_Sense\build_new\TypeSense_autogen\timestamp_MinSizeRel" />
+    <None Include="E:\Type_Sense\build_new\TypeSense_autogen\timestamp_RelWithDebInfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{1F15B84B-488E-3317-982C-B6A757804729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CA62E6FC-3A35-3E64-828A-7728E8AB2B99}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

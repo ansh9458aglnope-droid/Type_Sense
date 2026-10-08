@@ -84,7 +84,38 @@ static const QStringList sentenceBank = {
     "Use metrics like WPM to track improvement.",
     "Keep a log of mistakes for targeted practice.",
     "Practice with varied sentence lengths and structures.",
-    "Stay patient and consistent in your learning journey."
+    "Stay patient and consistent in your learning journey.",
+    // Added natural sentences for variety
+    "The quiet river reflected the orange light of the setting sun.",
+    "She packed her camera before leaving for the mountain trail.",
+    "Machine learning models improve when they receive better quality data.",
+    "The library was almost empty after the evening classes ended.",
+    "The old train crossed the valley just before sunset.",
+    "A sudden storm turned the peaceful meadow into a wet wonderland.",
+    "He wrote code that could parse natural language in real time.",
+    "During the lecture, the professor illustrated complex algorithms with simple diagrams.",
+    "Their conversation about art lasted for hours over coffee.",
+    "The aroma of freshly baked bread filled the kitchen.",
+    "She smiled when she saw her childhood photo on social media.",
+    "The city skyline glittered under a blanket of stars.",
+    "In the laboratory, scientists measured the reaction rate at different temperatures.",
+    "He tuned his guitar until every string sang in harmony.",
+    "The book's plot twist left readers stunned and eager for more.",
+    "A small dog chased its tail around the garden.",
+    "She painted a landscape that captured the essence of autumn.",
+    "They celebrated their promotion with a surprise party.",
+    "The documentary explored the history of jazz music.",
+    "The wind carried the scent of pine from the distant forest.",
+    "He discovered an ancient manuscript in the attic.",
+    "The child giggled as she played hide-and-seek behind the curtains.",
+    "They navigated through the maze of streets using only their sense of direction.",
+    "Her laughter echoed across the quiet room.",
+    "The spaceship glided silently past the stars.",
+    "He brewed a cup of coffee that tasted like sunshine.",
+    "The mountain peak offered a panoramic view of the valley below.",
+    "She composed a symphony inspired by the ocean's rhythm.",
+    "They debated philosophy over steaming cups of tea.",
+    "A sudden flash of lightning illuminated the night sky."
 };
 
 // Simple paragraph bank (10 short paragraphs)
@@ -98,7 +129,13 @@ static const QStringList paragraphBank = {
     "Celebrate small milestones in your learning journey. Stay motivated by setting achievable targets. Develop a consistent routine for best results.",
     "Use typing software to simulate real-world scenarios. Practice with both left and right hand emphasis. Balance practice between speed and accuracy.",
     "Try typing without looking at the screen to improve muscle memory. Focus on key placement rather than individual letters. Use typing games for a fun learning experience.",
-    "Keep your workspace organized to reduce distractions. Regularly update your practice content. Avoid fatigue by taking short breaks."
+    "Keep your workspace organized to reduce distractions. Regularly update your practice content. Avoid fatigue by taking short breaks.",
+    "The sunrise painted the sky with hues of pink and gold as the city awoke.",
+    "At the market, vendors shouted over the clatter of carts, offering fresh produce and fragrant spices.",
+    "During the hike, a sudden waterfall revealed crystal clear water cascading into a mossy pool.",
+    "In the quiet library, an old book's pages rustled softly as someone turned them.",
+    "The concert hall vibrated with applause after the orchestra finished their final piece.",
+    "On the rooftop terrace, friends shared stories while watching the sunset over skyscrapers."
 };
 
 
@@ -107,9 +144,7 @@ AdaptiveEngine::AdaptiveEngine()
     // Build a small exercise bank
     m_bank = {
         {"Home Row Easy 1", "home-row", 1, "asdfghjkl;"},
-        {"Home Row Easy 2", "home-row", 1, "qwertyuiop[]\\"},
-        {"Top Row Medium 1", "top-row", 2, "QWERTYUIOP{}|"},
-        {"Bottom Row Medium 1", "bottom-row", 2, "zxcvbnm,./"},
+        {"Home Row Easy 2", "home-row", 1, "qwertyuiop[]\\"},        {"Bottom Row Medium 1", "bottom-row", 2, "zxcvbnm,./"},
         {"Mixed Text Hard 1", "mixed-text", 3, "The quick brown fox jumps over the lazy dog."},
         {"Mixed Text Hard 2", "mixed-text", 3, "Pack my box with five dozen liquor jugs."}
     };
@@ -121,32 +156,58 @@ AdaptiveEngine::AdaptiveEngine()
 
 const Exercise* AdaptiveEngine::getNextExercise()
 {
-    // Find next exercise matching current difficulty and containing weak keys if any.
-    for(size_t i=m_nextIndex;i<m_bank.size();++i){
+    // Find next unique exercise of current difficulty.
+    size_t startIdx = m_nextIndex;
+    bool wrapped = false;
+    const Exercise* selected = nullptr;
+    bool hasWeakCandidate = false; // whether we already found a weak‑key exercise
+    for(size_t i=startIdx;; ++i){
+        if(i>=m_bank.size()){
+            if(wrapped) break; // all exercises examined
+            i=0; wrapped=true;
+        }
         const auto& ex = m_bank[i];
         if(ex.difficulty!=m_currentDifficulty) continue;
-        // Determine weak keys present in this exercise
-        bool hasWeak=false;
-        int matchCount=0;
-        QVector<QChar> weakKeysInEx;
-        for(QChar c:ex.targetText){
-            if(m_errorCount.contains(c)){
-                int cnt=m_errorCount[c];
-                if(cnt>0){hasWeak=true;matchCount++;weakKeysInEx.append(c);}
-            }
-        }
-        // If we have weak keys, pick it immediately
-        bool adaptive = hasWeak;
-        m_lastWasDynamic=false;
-        m_lastAdaptive=adaptive;
-        m_lastWeakKeysTargeted.clear();
-        for(QChar ck:weakKeysInEx){ if(!m_lastWeakKeysTargeted.contains(ck)) m_lastWeakKeysTargeted.append(ck);} // unique
-        m_lastWeakKeyMatchesCount = matchCount;
+        if(generatedTargets_.contains(ex.targetText)) continue; // skip duplicates
         
-        if(hasWeak || m_nextIndex==i){
-            m_nextIndex = i+1;
-            return &ex;
+        bool hasWeak=false;
+        for(QChar c:ex.targetText){
+            if(m_errorCount.contains(c) && m_errorCount[c]>0){hasWeak=true;break;}
         }
+        if(hasWeak && !selected){
+            selected = &ex;
+            hasWeakCandidate = true;
+        } else if(!hasWeakCandidate && !selected){
+            // first non‑weak candidate
+            selected = &ex;
+        }
+        if(selected) break; // prefer weak over non‑weak, so we can stop once a suitable one is found
+    }
+    if(selected){
+        // Update state based on the chosen exercise
+        const Exercise& ex = *selected;
+        if(ex.category == "dynamic"){
+            m_lastWasDynamic = true; // metadata already set by generateDynamicExercise()
+            // keep existing adaptive/weak key data
+        } else {
+            m_lastWasDynamic = false;
+            m_lastAdaptive = false;
+            m_lastWeakKeysTargeted.clear();
+            int matchCount=0;
+            for(QChar c:ex.targetText){
+                if(m_errorCount.contains(c) && m_errorCount[c]>0) matchCount++;
+            }
+            m_lastWeakKeyMatchesCount = matchCount;
+        }
+        // Mark as used and advance index
+        generatedTargets_.insert(ex.targetText);
+        // advance index past the chosen exercise
+        size_t idxFound = 0;
+        for(size_t j=0;j<m_bank.size();++j){
+            if(&m_bank[j]==selected) {idxFound=j;break;}
+        }
+        m_nextIndex = (idxFound+1)%m_bank.size();
+        return selected;
     }
     // No matching difficulty left – bump to next level
     if(m_currentDifficulty<3){
@@ -211,29 +272,39 @@ const Exercise* AdaptiveEngine::generateDynamicExercise()
     ex.difficulty = m_currentDifficulty;
     ex.targetText = target;
 
-    // Set debug state
-    m_lastWasDynamic=true;
-    m_lastAdaptive=!weakKeys.isEmpty();
-    m_lastWeakKeysTargeted.clear();
-    for(QChar ck:weakKeys){ if(!m_lastWeakKeysTargeted.contains(ck)) m_lastWeakKeysTargeted.append(ck); }
+        // Set debug state
+        m_lastWasDynamic=true;
+        m_lastAdaptive=!weakKeys.isEmpty();
+        // Determine weak keys actually present in the generated target text
+        QSet<QChar> used;
+        for(QChar c : target){
+            if(weakKeys.contains(c) && !used.contains(c)){
+                used.insert(c);
+            }
+        }
+        // Build list of weak key stats sorted by count descending
+        QList<QPair<QChar,int>> wcList;
+        for(auto it=m_errorCount.constBegin(); it!=m_errorCount.constEnd(); ++it){
+            if(it.value()>0)
+                wcList.append(qMakePair(it.key(),it.value()));
+        }
+        std::sort(wcList.begin(),wcList.end(),
+                  [](const QPair<QChar,int>&a,const QPair<QChar,int>&b){return a.second>b.second;});
+        // Determine focus keys: top N (5) weak keys that actually appear in target
+        QVector<QChar> focus;
+        const int maxFocus = 5;
+        for(const auto &p : wcList){
+            if(used.contains(p.first)){
+                focus.append(p.first);
+                if(focus.size() >= maxFocus) break;
+            }
+        }
+        m_lastWeakKeysTargeted = focus;
     // Count matches in this exercise
     int matchCount=0;
     for(QChar c:target){ if(m_errorCount.contains(c) && m_errorCount[c]>0) matchCount++; }
     m_lastWeakKeyMatchesCount = matchCount;
 
-    qDebug() << "[AdaptiveEngine]" << "Weak keys:";
-    QList<QPair<QChar,int>> wcList;
-    for(auto it=m_errorCount.constBegin(); it!=m_errorCount.constEnd(); ++it){ if(it.value()>0) wcList.append(qMakePair(it.key(),it.value())); }
-    std::sort(wcList.begin(),wcList.end(),[](const QPair<QChar,int>&a,const QPair<QChar,int>&b){return a.second>b.second;});
-    QString weakStr="";
-    for(const auto &p:wcList) weakStr += QString(" %1(%2)").arg(p.first).arg(p.second);
-    qDebug() << weakStr;
-
-    qDebug() << "Selected exercise:" << target;
-    QString matchedWeakStr="";
-    for(QChar c:target){ if(weakKeys.contains(c)) matchedWeakStr += QString(" %1").arg(c); }
-    qDebug() << "Matched weak keys:" << matchedWeakStr.trimmed();
-    qDebug() << "Adaptive:" << (m_lastAdaptive?"YES":"NO");
 
     m_bank.append(ex);
     generatedTargets_.insert(target);

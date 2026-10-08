@@ -1,0 +1,4108 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake:218 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.14.60+43b635718 for .NET Framework
+      Build started 08-10-2026 04:40:00.
+      
+      Project "E:\\Type_Sense\\build_new\\CMakeFiles\\4.4.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> E:\\Type_Sense\\build_new\\CMakeFiles\\4.4.3\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "E:\\Type_Sense\\build_new\\CMakeFiles\\4.4.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.55
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        E:/Type_Sense/build_new/CMakeFiles/4.4.3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:102 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/Sunshine/lld-link.com"
+      - "C:/Program Files/Sunshine/lld-link.exe"
+      - "C:/Program Files/Sunshine/lld-link"
+      - "C:/Program Files/Sunshine/tools/lld-link.com"
+      - "C:/Program Files/Sunshine/tools/lld-link.exe"
+      - "C:/Program Files/Sunshine/tools/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Program Files/PostgreSQL/18/bin/lld-link.com"
+      - "C:/Program Files/PostgreSQL/18/bin/lld-link.exe"
+      - "C:/Program Files/PostgreSQL/18/bin/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/lld-link.com"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/lld-link.exe"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/lld-link"
+      - "D:/Microsoft VS Code/bin/lld-link.com"
+      - "D:/Microsoft VS Code/bin/lld-link.exe"
+      - "D:/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/lld-link.com"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/lld-link.exe"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/lld-link"
+      - "C:/Users/Ansh/.lmstudio/bin/lld-link.com"
+      - "C:/Users/Ansh/.lmstudio/bin/lld-link.exe"
+      - "C:/Users/Ansh/.lmstudio/bin/lld-link"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/lld-link.com"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/lld-link.exe"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/lld-link"
+      - "C:/msys64/ucrt64/bin/lld-link.com"
+      - "C:/msys64/ucrt64/bin/lld-link.exe"
+      - "C:/msys64/ucrt64/bin/lld-link"
+      - "C:/Users/Ansh/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/Ansh/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/Ansh/AppData/Roaming/npm/lld-link"
+      - "C:/msys64/usr/bin/lld-link.com"
+      - "C:/msys64/usr/bin/lld-link.exe"
+      - "C:/msys64/usr/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt"
+      - "C:/Program Files/dotnet/mt.com"
+      - "C:/Program Files/dotnet/mt.exe"
+      - "C:/Program Files/dotnet/mt"
+      - "C:/Program Files/Sunshine/mt.com"
+      - "C:/Program Files/Sunshine/mt.exe"
+      - "C:/Program Files/Sunshine/mt"
+      - "C:/Program Files/Sunshine/tools/mt.com"
+      - "C:/Program Files/Sunshine/tools/mt.exe"
+      - "C:/Program Files/Sunshine/tools/mt"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt"
+      - "C:/Program Files/nodejs/mt.com"
+      - "C:/Program Files/nodejs/mt.exe"
+      - "C:/Program Files/nodejs/mt"
+      - "C:/Program Files/PostgreSQL/18/bin/mt.com"
+      - "C:/Program Files/PostgreSQL/18/bin/mt.exe"
+      - "C:/Program Files/PostgreSQL/18/bin/mt"
+      - "C:/ProgramData/chocolatey/bin/mt.com"
+      - "C:/ProgramData/chocolatey/bin/mt.exe"
+      - "C:/ProgramData/chocolatey/bin/mt"
+      - "C:/Program Files/CMake/bin/mt.com"
+      - "C:/Program Files/CMake/bin/mt.exe"
+      - "C:/Program Files/CMake/bin/mt"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/mt.com"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/mt.exe"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/mt"
+      - "D:/Microsoft VS Code/bin/mt.com"
+      - "D:/Microsoft VS Code/bin/mt.exe"
+      - "D:/Microsoft VS Code/bin/mt"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/mt.com"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/mt.exe"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/mt"
+      - "C:/Users/Ansh/.lmstudio/bin/mt.com"
+      - "C:/Users/Ansh/.lmstudio/bin/mt.exe"
+      - "C:/Users/Ansh/.lmstudio/bin/mt"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/mt.com"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/mt.exe"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/mt"
+      - "C:/msys64/ucrt64/bin/mt.com"
+      - "C:/msys64/ucrt64/bin/mt.exe"
+      - "C:/msys64/ucrt64/bin/mt"
+      - "C:/Users/Ansh/AppData/Roaming/npm/mt.com"
+      - "C:/Users/Ansh/AppData/Roaming/npm/mt.exe"
+      - "C:/Users/Ansh/AppData/Roaming/npm/mt"
+      - "C:/msys64/usr/bin/mt.com"
+      - "C:/msys64/usr/bin/mt.exe"
+      - "C:/msys64/usr/bin/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.14.60+43b635718 for .NET Framework
+      Build started 08-10-2026 04:40:01.
+      
+      Project "E:\\Type_Sense\\build_new\\CMakeFiles\\4.4.3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> E:\\Type_Sense\\build_new\\CMakeFiles\\4.4.3\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "E:\\Type_Sense\\build_new\\CMakeFiles\\4.4.3\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.36
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        E:/Type_Sense/build_new/CMakeFiles/4.4.3/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:64 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/Sunshine/lld-link.com"
+      - "C:/Program Files/Sunshine/lld-link.exe"
+      - "C:/Program Files/Sunshine/lld-link"
+      - "C:/Program Files/Sunshine/tools/lld-link.com"
+      - "C:/Program Files/Sunshine/tools/lld-link.exe"
+      - "C:/Program Files/Sunshine/tools/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Program Files/PostgreSQL/18/bin/lld-link.com"
+      - "C:/Program Files/PostgreSQL/18/bin/lld-link.exe"
+      - "C:/Program Files/PostgreSQL/18/bin/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/lld-link.com"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/lld-link.exe"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/lld-link"
+      - "D:/Microsoft VS Code/bin/lld-link.com"
+      - "D:/Microsoft VS Code/bin/lld-link.exe"
+      - "D:/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/lld-link.com"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/lld-link.exe"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/lld-link"
+      - "C:/Users/Ansh/.lmstudio/bin/lld-link.com"
+      - "C:/Users/Ansh/.lmstudio/bin/lld-link.exe"
+      - "C:/Users/Ansh/.lmstudio/bin/lld-link"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/lld-link.com"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/lld-link.exe"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/lld-link"
+      - "C:/msys64/ucrt64/bin/lld-link.com"
+      - "C:/msys64/ucrt64/bin/lld-link.exe"
+      - "C:/msys64/ucrt64/bin/lld-link"
+      - "C:/Users/Ansh/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/Ansh/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/Ansh/AppData/Roaming/npm/lld-link"
+      - "C:/msys64/usr/bin/lld-link.com"
+      - "C:/msys64/usr/bin/lld-link.exe"
+      - "C:/msys64/usr/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:592 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:565 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC-CXX.cmake:6 (__windows_compiler_msvc)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeCXXInformation.cmake:48 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/TypeSense/bin/"
+      - "C:/Program Files/TypeSense/sbin/"
+      - "C:/Program Files/TypeSense/"
+    searched_directories:
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc"
+      - "C:/Program Files/dotnet/rc.com"
+      - "C:/Program Files/dotnet/rc.exe"
+      - "C:/Program Files/dotnet/rc"
+      - "C:/Program Files/Sunshine/rc.com"
+      - "C:/Program Files/Sunshine/rc.exe"
+      - "C:/Program Files/Sunshine/rc"
+      - "C:/Program Files/Sunshine/tools/rc.com"
+      - "C:/Program Files/Sunshine/tools/rc.exe"
+      - "C:/Program Files/Sunshine/tools/rc"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc"
+      - "C:/Program Files/nodejs/rc.com"
+      - "C:/Program Files/nodejs/rc.exe"
+      - "C:/Program Files/nodejs/rc"
+      - "C:/Program Files/PostgreSQL/18/bin/rc.com"
+      - "C:/Program Files/PostgreSQL/18/bin/rc.exe"
+      - "C:/Program Files/PostgreSQL/18/bin/rc"
+      - "C:/ProgramData/chocolatey/bin/rc.com"
+      - "C:/ProgramData/chocolatey/bin/rc.exe"
+      - "C:/ProgramData/chocolatey/bin/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/rc.com"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/rc.exe"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/rc"
+      - "D:/Microsoft VS Code/bin/rc.com"
+      - "D:/Microsoft VS Code/bin/rc.exe"
+      - "D:/Microsoft VS Code/bin/rc"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/rc.com"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/rc.exe"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/rc"
+      - "C:/Users/Ansh/.lmstudio/bin/rc.com"
+      - "C:/Users/Ansh/.lmstudio/bin/rc.exe"
+      - "C:/Users/Ansh/.lmstudio/bin/rc"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/rc.com"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/rc.exe"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/rc"
+      - "C:/msys64/ucrt64/bin/rc.com"
+      - "C:/msys64/ucrt64/bin/rc.exe"
+      - "C:/msys64/ucrt64/bin/rc"
+      - "C:/Users/Ansh/AppData/Roaming/npm/rc.com"
+      - "C:/Users/Ansh/AppData/Roaming/npm/rc.exe"
+      - "C:/Users/Ansh/AppData/Roaming/npm/rc"
+      - "C:/msys64/usr/bin/rc.com"
+      - "C:/msys64/usr/bin/rc.exe"
+      - "C:/msys64/usr/bin/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/CMake/sbin/rc.com"
+      - "C:/Program Files/CMake/sbin/rc.exe"
+      - "C:/Program Files/CMake/sbin/rc"
+      - "C:/Program Files/CMake/rc.com"
+      - "C:/Program Files/CMake/rc.exe"
+      - "C:/Program Files/CMake/rc"
+      - "C:/Program Files/TypeSense/bin/rc.com"
+      - "C:/Program Files/TypeSense/bin/rc.exe"
+      - "C:/Program Files/TypeSense/bin/rc"
+      - "C:/Program Files/TypeSense/sbin/rc.com"
+      - "C:/Program Files/TypeSense/sbin/rc.exe"
+      - "C:/Program Files/TypeSense/sbin/rc"
+      - "C:/Program Files/TypeSense/rc.com"
+      - "C:/Program Files/TypeSense/rc.exe"
+      - "C:/Program Files/TypeSense/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-9t2cag"
+      binary: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-9t2cag"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: 'E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-9t2cag'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_583d3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.60+43b635718 for .NET Framework
+        Build started 08-10-2026 04:40:01.
+        
+        Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-9t2cag\\cmTC_583d3.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-9t2cag\\Debug\\".
+          Creating directory "cmTC_583d3.dir\\Debug\\cmTC_583d3.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_583d3.dir\\Debug\\cmTC_583d3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_583d3.dir\\Debug\\cmTC_583d3.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_583d3.dir\\Debug\\\\" /Fd"cmTC_583d3.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35229 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_583d3.dir\\Debug\\\\" /Fd"cmTC_583d3.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-9t2cag\\Debug\\cmTC_583d3.exe" /INCREMENTAL /ILK:"cmTC_583d3.dir\\Debug\\cmTC_583d3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-9t2cag/Debug/cmTC_583d3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-9t2cag/Debug/cmTC_583d3.lib" /MACHINE:X64  /machine:x64 cmTC_583d3.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_583d3.vcxproj -> E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-9t2cag\\Debug\\cmTC_583d3.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_583d3.dir\\Debug\\cmTC_583d3.tlog\\unsuccessfulbuild".
+          Touching "cmTC_583d3.dir\\Debug\\cmTC_583d3.tlog\\cmTC_583d3.lastbuildstate".
+        Done Building Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-9t2cag\\cmTC_583d3.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.34
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        link line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-9t2cag\\Debug\\cmTC_583d3.exe" /INCREMENTAL /ILK:"cmTC_583d3.dir\\Debug\\cmTC_583d3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-9t2cag/Debug/cmTC_583d3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-9t2cag/Debug/cmTC_583d3.lib" /MACHINE:X64  /machine:x64 cmTC_583d3.dir\\Debug\\CMakeCXXCompilerABI.obj] ==> linker [C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe]
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe 
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35229.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-4hm8s4"
+      binary: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-4hm8s4"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: 'E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-4hm8s4'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_56234.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.60+43b635718 for .NET Framework
+        Build started 08-10-2026 04:40:02.
+        
+        Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-4hm8s4\\cmTC_56234.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-4hm8s4\\Debug\\".
+          Creating directory "cmTC_56234.dir\\Debug\\cmTC_56234.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_56234.dir\\Debug\\cmTC_56234.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_56234.dir\\Debug\\cmTC_56234.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_56234.dir\\Debug\\\\" /Fd"cmTC_56234.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35229 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_56234.dir\\Debug\\\\" /Fd"cmTC_56234.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.4\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-4hm8s4\\Debug\\cmTC_56234.exe" /INCREMENTAL /ILK:"cmTC_56234.dir\\Debug\\cmTC_56234.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-4hm8s4/Debug/cmTC_56234.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-4hm8s4/Debug/cmTC_56234.lib" /MACHINE:X64  /machine:x64 cmTC_56234.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_56234.vcxproj -> E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-4hm8s4\\Debug\\cmTC_56234.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_56234.dir\\Debug\\cmTC_56234.tlog\\unsuccessfulbuild".
+          Touching "cmTC_56234.dir\\Debug\\cmTC_56234.tlog\\cmTC_56234.lastbuildstate".
+        Done Building Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-4hm8s4\\cmTC_56234.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.33
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        link line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-4hm8s4\\Debug\\cmTC_56234.exe" /INCREMENTAL /ILK:"cmTC_56234.dir\\Debug\\cmTC_56234.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-4hm8s4/Debug/cmTC_56234.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-4hm8s4/Debug/cmTC_56234.lib" /MACHINE:X64  /machine:x64 cmTC_56234.dir\\Debug\\CMakeCCompilerABI.obj] ==> linker [C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe]
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe 
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35229.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:10 (find_package)"
+    name: "Qt6"
+    components:
+      -
+        name: "Widgets"
+        required: true
+        found: false
+      -
+        name: "Sql"
+        required: true
+        found: false
+    configs:
+      -
+        filename: "Qt6.cps"
+        kind: "cps"
+      -
+        filename: "qt6.cps"
+        kind: "cps"
+      -
+        filename: "Qt6Config.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/tools/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/tools/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/tools/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/tools/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/tools/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Sunshine/tools/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PostgreSQL/18/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PostgreSQL/18/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PostgreSQL/18/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PostgreSQL/18/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PostgreSQL/18/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PostgreSQL/18/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Python/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Python/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Python/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Python/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Python/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/Python/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/Microsoft VS Code/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/.lmstudio/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/.lmstudio/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/.lmstudio/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/.lmstudio/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/.lmstudio/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/.lmstudio/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/GitHubDesktop/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/GitHubDesktop/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/GitHubDesktop/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/GitHubDesktop/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/GitHubDesktop/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Ansh/AppData/Local/GitHubDesktop/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/usr/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/usr/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/usr/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/usr/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/usr/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/usr/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/lib/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/lib/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/share/cps/Qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/share/cps/qt6.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CheckSourceCompiles.cmake:81 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:160 (check_c_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Dependencies.cmake:38 (_qt_internal_find_third_party_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:196 (include)"
+      - "CMakeLists.txt:10 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-tu4kuu"
+      binary: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-tu4kuu"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6;E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-tu4kuu'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c3575.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.60+43b635718 for .NET Framework
+        Build started 08-10-2026 04:40:10.
+        
+        Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-tu4kuu\\cmTC_c3575.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-tu4kuu\\Debug\\".
+          Creating directory "cmTC_c3575.dir\\Debug\\cmTC_c3575.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c3575.dir\\Debug\\cmTC_c3575.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c3575.dir\\Debug\\cmTC_c3575.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_c3575.dir\\Debug\\\\" /Fd"cmTC_c3575.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-tu4kuu\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35229 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_c3575.dir\\Debug\\\\" /Fd"cmTC_c3575.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-tu4kuu\\src.c"
+          src.c
+        E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-tu4kuu\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-tu4kuu\\cmTC_c3575.vcxproj]
+        Done Building Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-tu4kuu\\cmTC_c3575.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-tu4kuu\\cmTC_c3575.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-tu4kuu\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-tu4kuu\\cmTC_c3575.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.25
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CheckLibraryExists.cmake:142 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:175 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:238 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Dependencies.cmake:38 (_qt_internal_find_third_party_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:196 (include)"
+      - "CMakeLists.txt:10 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-cxz9d8"
+      binary: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-cxz9d8"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6;E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-cxz9d8'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ba493.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.60+43b635718 for .NET Framework
+        Build started 08-10-2026 04:40:11.
+        
+        Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-cxz9d8\\cmTC_ba493.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-cxz9d8\\Debug\\".
+          Creating directory "cmTC_ba493.dir\\Debug\\cmTC_ba493.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ba493.dir\\Debug\\cmTC_ba493.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ba493.dir\\Debug\\cmTC_ba493.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_ba493.dir\\Debug\\\\" /Fd"cmTC_ba493.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-cxz9d8\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35229 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_ba493.dir\\Debug\\\\" /Fd"cmTC_ba493.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-cxz9d8\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-cxz9d8\\Debug\\cmTC_ba493.exe" /INCREMENTAL /ILK:"cmTC_ba493.dir\\Debug\\cmTC_ba493.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-cxz9d8/Debug/cmTC_ba493.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-cxz9d8/Debug/cmTC_ba493.lib" /MACHINE:X64  /machine:x64 cmTC_ba493.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-cxz9d8\\cmTC_ba493.vcxproj]
+        Done Building Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-cxz9d8\\cmTC_ba493.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-cxz9d8\\cmTC_ba493.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-cxz9d8\\cmTC_ba493.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.26
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CheckLibraryExists.cmake:142 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:175 (check_library_exists)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake:239 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Dependencies.cmake:38 (_qt_internal_find_third_party_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:196 (include)"
+      - "CMakeLists.txt:10 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-3ydvci"
+      binary: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-3ydvci"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6;E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-3ydvci'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_43c1d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.60+43b635718 for .NET Framework
+        Build started 08-10-2026 04:40:11.
+        
+        Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-3ydvci\\cmTC_43c1d.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-3ydvci\\Debug\\".
+          Creating directory "cmTC_43c1d.dir\\Debug\\cmTC_43c1d.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_43c1d.dir\\Debug\\cmTC_43c1d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_43c1d.dir\\Debug\\cmTC_43c1d.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_43c1d.dir\\Debug\\\\" /Fd"cmTC_43c1d.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-3ydvci\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35229 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_43c1d.dir\\Debug\\\\" /Fd"cmTC_43c1d.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-3ydvci\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-3ydvci\\Debug\\cmTC_43c1d.exe" /INCREMENTAL /ILK:"cmTC_43c1d.dir\\Debug\\cmTC_43c1d.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-3ydvci/Debug/cmTC_43c1d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-3ydvci/Debug/cmTC_43c1d.lib" /MACHINE:X64  /machine:x64 cmTC_43c1d.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-3ydvci\\cmTC_43c1d.vcxproj]
+        Done Building Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-3ydvci\\cmTC_43c1d.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-3ydvci\\cmTC_43c1d.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-3ydvci\\cmTC_43c1d.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.26
+        
+      exitCode: 1
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake:14 (_qt_internal_find_tool_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake:36 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:43 (_qt_internal_find_tool_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "Qt6CoreTools"
+    configs:
+      -
+        filename: "Qt6CoreTools.cps"
+        kind: "cps"
+      -
+        filename: "qt6coretools.cps"
+        kind: "cps"
+      -
+        filename: "Qt6CoreToolsConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6coretools-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.12.0"
+      version_complete: "6.12.0"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6CoreTools"
+      search_paths:
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsTools/.."
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/Qt6CoreToolsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/qt6coretools-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/Qt6CoreTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/qt6coretools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/Qt6CoreTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/qt6coretools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/Qt6CoreToolsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/qt6coretools-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/lib/cps/Qt6CoreTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/lib/cps/qt6coretools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/share/cps/Qt6CoreTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/share/cps/qt6coretools.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake"
+      mode: "config"
+      version: "6.12.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake:14 (_qt_internal_find_tool_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake:36 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:43 (_qt_internal_find_tool_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "Qt6GuiTools"
+    configs:
+      -
+        filename: "Qt6GuiTools.cps"
+        kind: "cps"
+      -
+        filename: "qt6guitools.cps"
+        kind: "cps"
+      -
+        filename: "Qt6GuiToolsConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6guitools-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.12.0"
+      version_complete: "6.12.0"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6GuiTools"
+      search_paths:
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsTools/.."
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/Qt6GuiToolsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/qt6guitools-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/Qt6GuiTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/qt6guitools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/Qt6GuiTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/qt6guitools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/Qt6GuiToolsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/qt6guitools-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/lib/cps/Qt6GuiTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/lib/cps/qt6guitools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/share/cps/Qt6GuiTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/share/cps/qt6guitools.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake"
+      mode: "config"
+      version: "6.12.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:43 (_qt_internal_find_tool_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "Qt6WidgetsTools"
+    configs:
+      -
+        filename: "Qt6WidgetsTools.cps"
+        kind: "cps"
+      -
+        filename: "qt6widgetstools.cps"
+        kind: "cps"
+      -
+        filename: "Qt6WidgetsToolsConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6widgetstools-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.12.0"
+      version_complete: "6.12.0"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6WidgetsTools"
+      search_paths:
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/.."
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/Qt6WidgetsToolsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/qt6widgetstools-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/Qt6WidgetsTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/qt6widgetstools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/Qt6WidgetsTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/qt6widgetstools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/Qt6WidgetsToolsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/qt6widgetstools-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/lib/cps/Qt6WidgetsTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/lib/cps/qt6widgetstools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/share/cps/Qt6WidgetsTools.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Qt/6.12.0/msvc2022_64/share/cps/qt6widgetstools.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake"
+      mode: "config"
+      version: "6.12.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/Internal/CheckSourceCompiles.cmake:81 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CheckCXXSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:37 (_qt_internal_find_third_party_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:44 (include)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:51 (_qt_internal_find_qt_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-rylhyd"
+      binary: "E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-rylhyd"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6;E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-rylhyd'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9546b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.60+43b635718 for .NET Framework
+        Build started 08-10-2026 04:40:11.
+        
+        Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-rylhyd\\cmTC_9546b.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-rylhyd\\Debug\\".
+          Creating directory "cmTC_9546b.dir\\Debug\\cmTC_9546b.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_9546b.dir\\Debug\\cmTC_9546b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_9546b.dir\\Debug\\cmTC_9546b.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_9546b.dir\\Debug\\\\" /Fd"cmTC_9546b.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-rylhyd\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35229 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++17 /Fo"cmTC_9546b.dir\\Debug\\\\" /Fd"cmTC_9546b.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-rylhyd\\src.cxx"
+          src.cxx
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-rylhyd\\Debug\\cmTC_9546b.exe" /INCREMENTAL /ILK:"cmTC_9546b.dir\\Debug\\cmTC_9546b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-rylhyd/Debug/cmTC_9546b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"E:/Type_Sense/build_new/CMakeFiles/CMakeScratch/TryCompile-rylhyd/Debug/cmTC_9546b.lib" /MACHINE:X64  /machine:x64 cmTC_9546b.dir\\Debug\\src.obj
+          cmTC_9546b.vcxproj -> E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-rylhyd\\Debug\\cmTC_9546b.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_9546b.dir\\Debug\\cmTC_9546b.tlog\\unsuccessfulbuild".
+          Touching "cmTC_9546b.dir\\Debug\\cmTC_9546b.tlog\\cmTC_9546b.lastbuildstate".
+        Done Building Project "E:\\Type_Sense\\build_new\\CMakeFiles\\CMakeScratch\\TryCompile-rylhyd\\cmTC_9546b.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.38
+        
+      exitCode: 0
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:52 (_qt_internal_find_qt_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:44 (include)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:51 (_qt_internal_find_qt_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "Qt6EntryPointPrivate"
+    configs:
+      -
+        filename: "Qt6EntryPointPrivate.cps"
+        kind: "cps"
+      -
+        filename: "qt6entrypointprivate.cps"
+        kind: "cps"
+      -
+        filename: "Qt6EntryPointPrivateConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6entrypointprivate-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.12.0"
+      version_complete: "6.12.0"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6EntryPointPrivate"
+      search_paths:
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Core/.."
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/Qt6EntryPointPrivateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/qt6entrypointprivate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/Qt6EntryPointPrivate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/qt6entrypointprivate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/Qt6EntryPointPrivate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/qt6entrypointprivate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6EntryPointPrivateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/qt6entrypointprivate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake"
+      mode: "config"
+      version: "6.12.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:3263 (find_program)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:29 (_qt_internal_setup_deploy_support)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:196 (include)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:51 (_qt_internal_find_qt_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "program"
+    variable: "WINDEPLOYQT_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "windeployqt"
+    candidate_directories:
+      - "E:/Qt/6.12.0/msvc2022_64/bin/"
+      - "E:/Qt/6.12.0/msvc2022_64/sbin/"
+      - "E:/Qt/6.12.0/msvc2022_64/"
+      - "E:/qt/6.12.0/msvc2022_64/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/TypeSense/bin/"
+      - "C:/Program Files/TypeSense/sbin/"
+      - "C:/Program Files/TypeSense/"
+    searched_directories:
+      - "E:/Qt/6.12.0/msvc2022_64/bin/windeployqt.com"
+    found: "E:/qt/6.12.0/msvc2022_64/bin/windeployqt.exe"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:51 (_qt_internal_find_qt_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "Qt6Core"
+    configs:
+      -
+        filename: "Qt6Core.cps"
+        kind: "cps"
+      -
+        filename: "qt6core.cps"
+        kind: "cps"
+      -
+        filename: "Qt6CoreConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6core-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.12.0"
+      version_complete: "6.12.0"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6Core"
+      search_paths:
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/.."
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/Qt6CoreConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/qt6core-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/Qt6Core.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/qt6core.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/Qt6Core.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/qt6core.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6CoreConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/qt6core-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6CoreTools/Qt6CoreConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6CoreTools/qt6core-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6CorePrivate/Qt6CoreConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6CorePrivate/qt6core-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake"
+      mode: "config"
+      version: "6.12.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindVulkan.cmake:453 (find_path)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:13 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:34 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:37 (_qt_internal_find_third_party_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:51 (_qt_internal_find_qt_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "path"
+    variable: "Vulkan_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "vulkan/vulkan.h"
+    candidate_directories:
+      - "E:/Qt/6.12.0/msvc2022_64/include/"
+      - "E:/Qt/6.12.0/msvc2022_64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+      - "C:/Program Files/include/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/include/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/include/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/TypeSense/include/"
+      - "C:/Program Files/TypeSense/"
+    searched_directories:
+      - "E:/Qt/6.12.0/msvc2022_64/include/vulkan/vulkan.h"
+      - "E:/Qt/6.12.0/msvc2022_64/vulkan/vulkan.h"
+      - "C:/Windows/System32/vulkan/vulkan.h"
+      - "C:/Windows/vulkan/vulkan.h"
+      - "C:/Windows/System32/wbem/vulkan/vulkan.h"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/vulkan/vulkan.h"
+      - "C:/Windows/System32/OpenSSH/vulkan/vulkan.h"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/vulkan/vulkan.h"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/vulkan/vulkan.h"
+      - "C:/Program Files/dotnet/vulkan/vulkan.h"
+      - "C:/Program Files/Sunshine/vulkan/vulkan.h"
+      - "C:/Program Files/Sunshine/tools/vulkan/vulkan.h"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/vulkan/vulkan.h"
+      - "C:/Program Files/nodejs/vulkan/vulkan.h"
+      - "C:/Program Files/PostgreSQL/18/bin/vulkan/vulkan.h"
+      - "C:/ProgramData/chocolatey/bin/vulkan/vulkan.h"
+      - "C:/Program Files/CMake/bin/vulkan/vulkan.h"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/vulkan/vulkan.h"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/vulkan/vulkan.h"
+      - "D:/Microsoft VS Code/bin/vulkan/vulkan.h"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/vulkan/vulkan.h"
+      - "C:/Users/Ansh/.lmstudio/bin/vulkan/vulkan.h"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/vulkan/vulkan.h"
+      - "C:/msys64/ucrt64/bin/vulkan/vulkan.h"
+      - "C:/Users/Ansh/AppData/Roaming/npm/vulkan/vulkan.h"
+      - "C:/msys64/usr/bin/vulkan/vulkan.h"
+      - "C:/Program Files/include/vulkan/vulkan.h"
+      - "C:/Program Files/vulkan/vulkan.h"
+      - "C:/Program Files (x86)/include/vulkan/vulkan.h"
+      - "C:/Program Files (x86)/vulkan/vulkan.h"
+      - "C:/Program Files/CMake/include/vulkan/vulkan.h"
+      - "C:/Program Files/CMake/vulkan/vulkan.h"
+      - "C:/Program Files/TypeSense/include/vulkan/vulkan.h"
+      - "C:/Program Files/TypeSense/vulkan/vulkan.h"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindVulkan.cmake:460 (find_library)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:13 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:34 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:37 (_qt_internal_find_third_party_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:51 (_qt_internal_find_qt_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "library"
+    variable: "Vulkan_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "vulkan-1"
+    candidate_directories:
+      - "E:/Qt/6.12.0/msvc2022_64/lib/"
+      - "E:/Qt/6.12.0/msvc2022_64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+      - "C:/Program Files/lib/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/lib/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/lib/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/TypeSense/lib/"
+      - "C:/Program Files/TypeSense/"
+      - "C:/Program Files/TypeSense/bin/"
+      - "/bin/"
+    searched_directories:
+      - "E:/Qt/6.12.0/msvc2022_64/lib/"
+      - "E:/Qt/6.12.0/msvc2022_64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+      - "C:/Program Files/lib/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/lib/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/lib/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/TypeSense/lib/"
+      - "C:/Program Files/TypeSense/"
+      - "C:/Program Files/TypeSense/bin/"
+      - "/bin/"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "C:/Program Files/TypeSense/bin"
+        - "C:/Program Files/CMake/bin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindVulkan.cmake:493 (find_program)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:13 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:34 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:37 (_qt_internal_find_third_party_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:51 (_qt_internal_find_qt_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "program"
+    variable: "Vulkan_GLSLC_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "glslc"
+    candidate_directories:
+      - "E:/Qt/6.12.0/msvc2022_64/bin/"
+      - "E:/Qt/6.12.0/msvc2022_64/sbin/"
+      - "E:/Qt/6.12.0/msvc2022_64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/TypeSense/bin/"
+      - "C:/Program Files/TypeSense/sbin/"
+      - "C:/Program Files/TypeSense/"
+    searched_directories:
+      - "E:/Qt/6.12.0/msvc2022_64/bin/glslc.com"
+      - "E:/Qt/6.12.0/msvc2022_64/bin/glslc.exe"
+      - "E:/Qt/6.12.0/msvc2022_64/bin/glslc"
+      - "E:/Qt/6.12.0/msvc2022_64/sbin/glslc.com"
+      - "E:/Qt/6.12.0/msvc2022_64/sbin/glslc.exe"
+      - "E:/Qt/6.12.0/msvc2022_64/sbin/glslc"
+      - "E:/Qt/6.12.0/msvc2022_64/glslc.com"
+      - "E:/Qt/6.12.0/msvc2022_64/glslc.exe"
+      - "E:/Qt/6.12.0/msvc2022_64/glslc"
+      - "C:/Windows/System32/glslc.com"
+      - "C:/Windows/System32/glslc.exe"
+      - "C:/Windows/System32/glslc"
+      - "C:/Windows/glslc.com"
+      - "C:/Windows/glslc.exe"
+      - "C:/Windows/glslc"
+      - "C:/Windows/System32/wbem/glslc.com"
+      - "C:/Windows/System32/wbem/glslc.exe"
+      - "C:/Windows/System32/wbem/glslc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslc"
+      - "C:/Windows/System32/OpenSSH/glslc.com"
+      - "C:/Windows/System32/OpenSSH/glslc.exe"
+      - "C:/Windows/System32/OpenSSH/glslc"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/glslc.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/glslc.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/glslc"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/glslc.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/glslc.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/glslc"
+      - "C:/Program Files/dotnet/glslc.com"
+      - "C:/Program Files/dotnet/glslc.exe"
+      - "C:/Program Files/dotnet/glslc"
+      - "C:/Program Files/Sunshine/glslc.com"
+      - "C:/Program Files/Sunshine/glslc.exe"
+      - "C:/Program Files/Sunshine/glslc"
+      - "C:/Program Files/Sunshine/tools/glslc.com"
+      - "C:/Program Files/Sunshine/tools/glslc.exe"
+      - "C:/Program Files/Sunshine/tools/glslc"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslc.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslc.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslc"
+      - "C:/Program Files/nodejs/glslc.com"
+      - "C:/Program Files/nodejs/glslc.exe"
+      - "C:/Program Files/nodejs/glslc"
+      - "C:/Program Files/PostgreSQL/18/bin/glslc.com"
+      - "C:/Program Files/PostgreSQL/18/bin/glslc.exe"
+      - "C:/Program Files/PostgreSQL/18/bin/glslc"
+      - "C:/ProgramData/chocolatey/bin/glslc.com"
+      - "C:/ProgramData/chocolatey/bin/glslc.exe"
+      - "C:/ProgramData/chocolatey/bin/glslc"
+      - "C:/Program Files/CMake/bin/glslc.com"
+      - "C:/Program Files/CMake/bin/glslc.exe"
+      - "C:/Program Files/CMake/bin/glslc"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/glslc.com"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/glslc.exe"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/glslc"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/glslc.com"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/glslc.exe"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/glslc"
+      - "D:/Microsoft VS Code/bin/glslc.com"
+      - "D:/Microsoft VS Code/bin/glslc.exe"
+      - "D:/Microsoft VS Code/bin/glslc"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/glslc.com"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/glslc.exe"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/glslc"
+      - "C:/Users/Ansh/.lmstudio/bin/glslc.com"
+      - "C:/Users/Ansh/.lmstudio/bin/glslc.exe"
+      - "C:/Users/Ansh/.lmstudio/bin/glslc"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/glslc.com"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/glslc.exe"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/glslc"
+      - "C:/msys64/ucrt64/bin/glslc.com"
+      - "C:/msys64/ucrt64/bin/glslc.exe"
+      - "C:/msys64/ucrt64/bin/glslc"
+      - "C:/Users/Ansh/AppData/Roaming/npm/glslc.com"
+      - "C:/Users/Ansh/AppData/Roaming/npm/glslc.exe"
+      - "C:/Users/Ansh/AppData/Roaming/npm/glslc"
+      - "C:/msys64/usr/bin/glslc.com"
+      - "C:/msys64/usr/bin/glslc.exe"
+      - "C:/msys64/usr/bin/glslc"
+      - "C:/Program Files/bin/glslc.com"
+      - "C:/Program Files/bin/glslc.exe"
+      - "C:/Program Files/bin/glslc"
+      - "C:/Program Files/sbin/glslc.com"
+      - "C:/Program Files/sbin/glslc.exe"
+      - "C:/Program Files/sbin/glslc"
+      - "C:/Program Files/glslc.com"
+      - "C:/Program Files/glslc.exe"
+      - "C:/Program Files/glslc"
+      - "C:/Program Files (x86)/bin/glslc.com"
+      - "C:/Program Files (x86)/bin/glslc.exe"
+      - "C:/Program Files (x86)/bin/glslc"
+      - "C:/Program Files (x86)/sbin/glslc.com"
+      - "C:/Program Files (x86)/sbin/glslc.exe"
+      - "C:/Program Files (x86)/sbin/glslc"
+      - "C:/Program Files (x86)/glslc.com"
+      - "C:/Program Files (x86)/glslc.exe"
+      - "C:/Program Files (x86)/glslc"
+      - "C:/Program Files/CMake/bin/glslc.com"
+      - "C:/Program Files/CMake/bin/glslc.exe"
+      - "C:/Program Files/CMake/bin/glslc"
+      - "C:/Program Files/CMake/sbin/glslc.com"
+      - "C:/Program Files/CMake/sbin/glslc.exe"
+      - "C:/Program Files/CMake/sbin/glslc"
+      - "C:/Program Files/CMake/glslc.com"
+      - "C:/Program Files/CMake/glslc.exe"
+      - "C:/Program Files/CMake/glslc"
+      - "C:/Program Files/TypeSense/bin/glslc.com"
+      - "C:/Program Files/TypeSense/bin/glslc.exe"
+      - "C:/Program Files/TypeSense/bin/glslc"
+      - "C:/Program Files/TypeSense/sbin/glslc.com"
+      - "C:/Program Files/TypeSense/sbin/glslc.exe"
+      - "C:/Program Files/TypeSense/sbin/glslc"
+      - "C:/Program Files/TypeSense/glslc.com"
+      - "C:/Program Files/TypeSense/glslc.exe"
+      - "C:/Program Files/TypeSense/glslc"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/FindVulkan.cmake:501 (find_program)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:13 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:34 (find_package)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:37 (_qt_internal_find_third_party_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:51 (_qt_internal_find_qt_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "program"
+    variable: "Vulkan_GLSLANG_VALIDATOR_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "glslangValidator"
+    candidate_directories:
+      - "E:/Qt/6.12.0/msvc2022_64/bin/"
+      - "E:/Qt/6.12.0/msvc2022_64/sbin/"
+      - "E:/Qt/6.12.0/msvc2022_64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Sunshine/"
+      - "C:/Program Files/Sunshine/tools/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/PostgreSQL/18/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/"
+      - "D:/Microsoft VS Code/bin/"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/"
+      - "C:/Users/Ansh/.lmstudio/bin/"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Users/Ansh/AppData/Roaming/npm/"
+      - "C:/msys64/usr/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/TypeSense/bin/"
+      - "C:/Program Files/TypeSense/sbin/"
+      - "C:/Program Files/TypeSense/"
+    searched_directories:
+      - "E:/Qt/6.12.0/msvc2022_64/bin/glslangValidator.com"
+      - "E:/Qt/6.12.0/msvc2022_64/bin/glslangValidator.exe"
+      - "E:/Qt/6.12.0/msvc2022_64/bin/glslangValidator"
+      - "E:/Qt/6.12.0/msvc2022_64/sbin/glslangValidator.com"
+      - "E:/Qt/6.12.0/msvc2022_64/sbin/glslangValidator.exe"
+      - "E:/Qt/6.12.0/msvc2022_64/sbin/glslangValidator"
+      - "E:/Qt/6.12.0/msvc2022_64/glslangValidator.com"
+      - "E:/Qt/6.12.0/msvc2022_64/glslangValidator.exe"
+      - "E:/Qt/6.12.0/msvc2022_64/glslangValidator"
+      - "C:/Windows/System32/glslangValidator.com"
+      - "C:/Windows/System32/glslangValidator.exe"
+      - "C:/Windows/System32/glslangValidator"
+      - "C:/Windows/glslangValidator.com"
+      - "C:/Windows/glslangValidator.exe"
+      - "C:/Windows/glslangValidator"
+      - "C:/Windows/System32/wbem/glslangValidator.com"
+      - "C:/Windows/System32/wbem/glslangValidator.exe"
+      - "C:/Windows/System32/wbem/glslangValidator"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslangValidator.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslangValidator.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslangValidator"
+      - "C:/Windows/System32/OpenSSH/glslangValidator.com"
+      - "C:/Windows/System32/OpenSSH/glslangValidator.exe"
+      - "C:/Windows/System32/OpenSSH/glslangValidator"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/glslangValidator.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/glslangValidator.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/glslangValidator"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/glslangValidator.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/glslangValidator.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/glslangValidator"
+      - "C:/Program Files/dotnet/glslangValidator.com"
+      - "C:/Program Files/dotnet/glslangValidator.exe"
+      - "C:/Program Files/dotnet/glslangValidator"
+      - "C:/Program Files/Sunshine/glslangValidator.com"
+      - "C:/Program Files/Sunshine/glslangValidator.exe"
+      - "C:/Program Files/Sunshine/glslangValidator"
+      - "C:/Program Files/Sunshine/tools/glslangValidator.com"
+      - "C:/Program Files/Sunshine/tools/glslangValidator.exe"
+      - "C:/Program Files/Sunshine/tools/glslangValidator"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslangValidator.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslangValidator.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslangValidator"
+      - "C:/Program Files/nodejs/glslangValidator.com"
+      - "C:/Program Files/nodejs/glslangValidator.exe"
+      - "C:/Program Files/nodejs/glslangValidator"
+      - "C:/Program Files/PostgreSQL/18/bin/glslangValidator.com"
+      - "C:/Program Files/PostgreSQL/18/bin/glslangValidator.exe"
+      - "C:/Program Files/PostgreSQL/18/bin/glslangValidator"
+      - "C:/ProgramData/chocolatey/bin/glslangValidator.com"
+      - "C:/ProgramData/chocolatey/bin/glslangValidator.exe"
+      - "C:/ProgramData/chocolatey/bin/glslangValidator"
+      - "C:/Program Files/CMake/bin/glslangValidator.com"
+      - "C:/Program Files/CMake/bin/glslangValidator.exe"
+      - "C:/Program Files/CMake/bin/glslangValidator"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/glslangValidator.com"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/glslangValidator.exe"
+      - "C:/Users/Ansh/AppData/Local/Microsoft/WindowsApps/glslangValidator"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/glslangValidator.com"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/glslangValidator.exe"
+      - "C:/Users/Ansh/AppData/Local/Python/bin/glslangValidator"
+      - "D:/Microsoft VS Code/bin/glslangValidator.com"
+      - "D:/Microsoft VS Code/bin/glslangValidator.exe"
+      - "D:/Microsoft VS Code/bin/glslangValidator"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/glslangValidator.com"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/glslangValidator.exe"
+      - "C:/Users/Ansh/AppData/Local/Programs/Ollama/glslangValidator"
+      - "C:/Users/Ansh/.lmstudio/bin/glslangValidator.com"
+      - "C:/Users/Ansh/.lmstudio/bin/glslangValidator.exe"
+      - "C:/Users/Ansh/.lmstudio/bin/glslangValidator"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/glslangValidator.com"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/glslangValidator.exe"
+      - "C:/Users/Ansh/AppData/Local/GitHubDesktop/bin/glslangValidator"
+      - "C:/msys64/ucrt64/bin/glslangValidator.com"
+      - "C:/msys64/ucrt64/bin/glslangValidator.exe"
+      - "C:/msys64/ucrt64/bin/glslangValidator"
+      - "C:/Users/Ansh/AppData/Roaming/npm/glslangValidator.com"
+      - "C:/Users/Ansh/AppData/Roaming/npm/glslangValidator.exe"
+      - "C:/Users/Ansh/AppData/Roaming/npm/glslangValidator"
+      - "C:/msys64/usr/bin/glslangValidator.com"
+      - "C:/msys64/usr/bin/glslangValidator.exe"
+      - "C:/msys64/usr/bin/glslangValidator"
+      - "C:/Program Files/bin/glslangValidator.com"
+      - "C:/Program Files/bin/glslangValidator.exe"
+      - "C:/Program Files/bin/glslangValidator"
+      - "C:/Program Files/sbin/glslangValidator.com"
+      - "C:/Program Files/sbin/glslangValidator.exe"
+      - "C:/Program Files/sbin/glslangValidator"
+      - "C:/Program Files/glslangValidator.com"
+      - "C:/Program Files/glslangValidator.exe"
+      - "C:/Program Files/glslangValidator"
+      - "C:/Program Files (x86)/bin/glslangValidator.com"
+      - "C:/Program Files (x86)/bin/glslangValidator.exe"
+      - "C:/Program Files (x86)/bin/glslangValidator"
+      - "C:/Program Files (x86)/sbin/glslangValidator.com"
+      - "C:/Program Files (x86)/sbin/glslangValidator.exe"
+      - "C:/Program Files (x86)/sbin/glslangValidator"
+      - "C:/Program Files (x86)/glslangValidator.com"
+      - "C:/Program Files (x86)/glslangValidator.exe"
+      - "C:/Program Files (x86)/glslangValidator"
+      - "C:/Program Files/CMake/bin/glslangValidator.com"
+      - "C:/Program Files/CMake/bin/glslangValidator.exe"
+      - "C:/Program Files/CMake/bin/glslangValidator"
+      - "C:/Program Files/CMake/sbin/glslangValidator.com"
+      - "C:/Program Files/CMake/sbin/glslangValidator.exe"
+      - "C:/Program Files/CMake/sbin/glslangValidator"
+      - "C:/Program Files/CMake/glslangValidator.com"
+      - "C:/Program Files/CMake/glslangValidator.exe"
+      - "C:/Program Files/CMake/glslangValidator"
+      - "C:/Program Files/TypeSense/bin/glslangValidator.com"
+      - "C:/Program Files/TypeSense/bin/glslangValidator.exe"
+      - "C:/Program Files/TypeSense/bin/glslangValidator"
+      - "C:/Program Files/TypeSense/sbin/glslangValidator.com"
+      - "C:/Program Files/TypeSense/sbin/glslangValidator.exe"
+      - "C:/Program Files/TypeSense/sbin/glslangValidator"
+      - "C:/Program Files/TypeSense/glslangValidator.com"
+      - "C:/Program Files/TypeSense/glslangValidator.exe"
+      - "C:/Program Files/TypeSense/glslangValidator"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:51 (_qt_internal_find_qt_dependencies)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "Qt6Gui"
+    configs:
+      -
+        filename: "Qt6Gui.cps"
+        kind: "cps"
+      -
+        filename: "qt6gui.cps"
+        kind: "cps"
+      -
+        filename: "Qt6GuiConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6gui-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.12.0"
+      version_complete: "6.12.0"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6Gui"
+      search_paths:
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/.."
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/Qt6GuiConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/qt6gui-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/Qt6Gui.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/qt6gui.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/Qt6Gui.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/qt6gui.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6GuiConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/qt6gui-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6GuiTools/Qt6GuiConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6GuiTools/qt6gui-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6GuiPrivate/Qt6GuiConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6GuiPrivate/qt6gui-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake"
+      mode: "config"
+      version: "6.12.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "Qt6Widgets"
+    configs:
+      -
+        filename: "Qt6Widgets.cps"
+        kind: "cps"
+      -
+        filename: "qt6widgets.cps"
+        kind: "cps"
+      -
+        filename: "Qt6WidgetsConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6widgets-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6Widgets"
+      search_paths:
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/Qt6WidgetsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/qt6widgets-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/Qt6Widgets.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/qt6widgets.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/Qt6Widgets.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/qt6widgets.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/qt6widgets-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsTools/qt6widgets-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsPrivate/Qt6WidgetsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6WidgetsPrivate/qt6widgets-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake"
+      mode: "config"
+      version: "6.12.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:257 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    name: "Qt6Sql"
+    configs:
+      -
+        filename: "Qt6Sql.cps"
+        kind: "cps"
+      -
+        filename: "qt6sql.cps"
+        kind: "cps"
+      -
+        filename: "Qt6SqlConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6sql-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6Sql"
+      search_paths:
+        - "E:/qt/6.12.0/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/Qt6SqlConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/qt6sql-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/Qt6Sql.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/lib/cps/qt6sql.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/Qt6Sql.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/Type_Sense/build_new/CMakeFiles/pkgRedirects/share/cps/qt6sql.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6SqlConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/qt6sql-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/qt6sql-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "E:/qt/6.12.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake"
+      mode: "config"
+      version: "6.12.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "E:/Qt/6.12.0/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Sunshine"
+        - "C:\\Program Files\\Sunshine\\tools"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\PostgreSQL\\18\\bin"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Python\\bin"
+        - "D:\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\Programs\\Ollama"
+        - "C:\\Users\\Ansh\\.lmstudio\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Users\\Ansh\\AppData\\Roaming\\npm"
+        - "C:\\msys64\\usr\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/TypeSense"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/TypeSense"
+...

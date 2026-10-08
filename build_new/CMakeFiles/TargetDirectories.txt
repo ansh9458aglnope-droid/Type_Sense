@@ -1,0 +1,4 @@
+E:/Type_Sense/build_new/CMakeFiles/TypeSense.dir
+E:/Type_Sense/build_new/CMakeFiles/db_viewer.dir
+E:/Type_Sense/build_new/CMakeFiles/ALL_BUILD.dir
+E:/Type_Sense/build_new/CMakeFiles/ZERO_CHECK.dir
