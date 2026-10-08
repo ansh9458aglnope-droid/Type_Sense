@@ -3,6 +3,9 @@
 
 # Build output
 build/
+build-mac/
+build_new/
+
 
 # Visual Studio 2022 user files and caches
 *.vcxproj.user

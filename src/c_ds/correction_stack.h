@@ -1,5 +1,6 @@
 #ifndef CORRECTION_STACK_H
 #define CORRECTION_STACK_H
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {
