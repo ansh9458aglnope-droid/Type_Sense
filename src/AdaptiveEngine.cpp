@@ -3,6 +3,11 @@
 #include <QRandomGenerator>
 #include <QStringList>
 #include <QDebug>
+#include <QHash>
+#include <QSet>
+#include <QVector>
+#include <memory>
+#include <new>
 
 // Simple sentence bank for dynamic generation
 static const QStringList sentenceBank = {
@@ -140,198 +145,224 @@ static const QStringList paragraphBank = {
 
 
 AdaptiveEngine::AdaptiveEngine()
+    : m_queue(exercise_queue_create())
 {
-    // Build a small exercise bank
     m_bank = {
         {"Home Row Easy 1", "home-row", 1, "asdfghjkl;"},
-        {"Home Row Easy 2", "home-row", 1, "qwertyuiop[]\\"},        {"Bottom Row Medium 1", "bottom-row", 2, "zxcvbnm,./"},
+        {"Home Row Easy 2", "home-row", 1, "qwertyuiop[]\\"},
+        {"Bottom Row Medium 1", "bottom-row", 2, "zxcvbnm,./"},
         {"Mixed Text Hard 1", "mixed-text", 3, "The quick brown fox jumps over the lazy dog."},
         {"Mixed Text Hard 2", "mixed-text", 3, "Pack my box with five dozen liquor jugs."}
     };
+    std::sort(m_bank.begin(), m_bank.end(), [](const Exercise& a, const Exercise& b) {
+        if (a.difficulty != b.difficulty) return a.difficulty < b.difficulty;
+        return a.title < b.title;
+    });
+}
 
-    // Ensure bank is sorted by difficulty then title for deterministic order
-    std::sort(m_bank.begin(), m_bank.end(), [](const Exercise&a,const Exercise&b){
-        if(a.difficulty!=b.difficulty) return a.difficulty<b.difficulty;return a.title<b.title;});
+AdaptiveEngine::~AdaptiveEngine()
+{
+    if (m_queue) {
+        while (!exercise_queue_is_empty(m_queue))
+            delete static_cast<Exercise*>(exercise_queue_dequeue(m_queue));
+        exercise_queue_destroy(m_queue);
+    }
+}
+
+int AdaptiveEngine::weakKeyScore(const Exercise& exercise) const
+{
+    int score = 0;
+    for (QChar c : exercise.targetText) score += m_errorCount.value(c, 0);
+    return score;
+}
+
+void AdaptiveEngine::enqueueScheduledExercises()
+{
+    if (!m_queue || !exercise_queue_is_empty(m_queue)) return;
+
+    struct Candidate { Exercise exercise; int score; };
+    QVector<Candidate> heap;
+    auto higherPriority = [](const Candidate& a, const Candidate& b) {
+        if (a.score != b.score) return a.score > b.score;
+        if (a.exercise.difficulty != b.exercise.difficulty)
+            return a.exercise.difficulty < b.exercise.difficulty;
+        return a.exercise.title < b.exercise.title;
+    };
+    auto heapPush = [&](const Candidate& value) {
+        heap.append(value);
+        int child = heap.size() - 1;
+        while (child > 0) {
+            int parent = (child - 1) / 2;
+            if (!higherPriority(heap[child], heap[parent])) break;
+            heap.swapItemsAt(child, parent);
+            child = parent;
+        }
+    };
+    auto heapPop = [&]() {
+        Candidate result = heap.first();
+        heap[0] = heap.last();
+        heap.removeLast();
+        int parent = 0;
+        while (parent < heap.size()) {
+            int left = parent * 2 + 1, right = left + 1, best = parent;
+            if (left < heap.size() && higherPriority(heap[left], heap[best])) best = left;
+            if (right < heap.size() && higherPriority(heap[right], heap[best])) best = right;
+            if (best == parent) break;
+            heap.swapItemsAt(parent, best);
+            parent = best;
+        }
+        return result;
+    };
+
+    for (const Exercise& exercise : m_bank) {
+        if (exercise.difficulty == m_currentDifficulty &&
+            !generatedTargets_.contains(exercise.targetText)) {
+            heapPush({exercise, weakKeyScore(exercise)});
+        }
+    }
+
+    // Queue up a small batch. A max heap chooses the most relevant exercises;
+    // the C FIFO queue then preserves that chosen order for the GUI.
+    const int batchSize = 3;
+    for (int i = 0; i < batchSize && !heap.isEmpty(); ++i) {
+        Candidate candidate = heapPop();
+        Exercise* copy = new (std::nothrow) Exercise(candidate.exercise);
+        if (!copy) break;
+        if (!exercise_queue_enqueue(m_queue, copy)) {
+            delete copy;
+            break;
+        }
+        generatedTargets_.insert(candidate.exercise.targetText);
+    }
 }
 
 const Exercise* AdaptiveEngine::getNextExercise()
 {
-    // Find next unique exercise of current difficulty.
-    size_t startIdx = m_nextIndex;
-    bool wrapped = false;
-    const Exercise* selected = nullptr;
-    bool hasWeakCandidate = false; // whether we already found a weak‑key exercise
-    for(size_t i=startIdx;; ++i){
-        if(i>=m_bank.size()){
-            if(wrapped) break; // all exercises examined
-            i=0; wrapped=true;
-        }
-        const auto& ex = m_bank[i];
-        if(ex.difficulty!=m_currentDifficulty) continue;
-        if(generatedTargets_.contains(ex.targetText)) continue; // skip duplicates
-        
-        bool hasWeak=false;
-        for(QChar c:ex.targetText){
-            if(m_errorCount.contains(c) && m_errorCount[c]>0){hasWeak=true;break;}
-        }
-        if(hasWeak && !selected){
-            selected = &ex;
-            hasWeakCandidate = true;
-        } else if(!hasWeakCandidate && !selected){
-            // first non‑weak candidate
-            selected = &ex;
-        }
-        if(selected) break; // prefer weak over non‑weak, so we can stop once a suitable one is found
+    if (!m_queue) return generateDynamicExercise();
+
+    if (exercise_queue_is_empty(m_queue)) {
+        enqueueScheduledExercises();
     }
-    if(selected){
-        // Update state based on the chosen exercise
-        const Exercise& ex = *selected;
-        if(ex.category == "dynamic"){
-            m_lastWasDynamic = true; // metadata already set by generateDynamicExercise()
-            // keep existing adaptive/weak key data
-        } else {
-            m_lastWasDynamic = false;
-            m_lastAdaptive = false;
-            m_lastWeakKeysTargeted.clear();
-            int matchCount=0;
-            for(QChar c:ex.targetText){
-                if(m_errorCount.contains(c) && m_errorCount[c]>0) matchCount++;
-            }
-            m_lastWeakKeyMatchesCount = matchCount;
+
+    if (exercise_queue_is_empty(m_queue)) {
+        if (m_currentDifficulty < 3) {
+            ++m_currentDifficulty;
+            enqueueScheduledExercises();
         }
-        // Mark as used and advance index
-        generatedTargets_.insert(ex.targetText);
-        // advance index past the chosen exercise
-        size_t idxFound = 0;
-        for(size_t j=0;j<m_bank.size();++j){
-            if(&m_bank[j]==selected) {idxFound=j;break;}
+    }
+
+    if (exercise_queue_is_empty(m_queue)) {
+        // No static exercises remain. Dynamic generator has bounded retries.
+        return generateDynamicExercise();
+    }
+
+    m_currentExercise.reset(static_cast<Exercise*>(exercise_queue_dequeue(m_queue)));
+    if (!m_currentExercise) return nullptr;
+
+    const Exercise& ex = *m_currentExercise;
+    m_lastWasDynamic = (ex.category == "dynamic");
+    m_lastAdaptive = false;
+    m_lastWeakKeysTargeted.clear();
+    m_lastWeakKeyMatchesCount = 0;
+
+    QList<QPair<QChar, int>> rankedKeys;
+    for (auto it = m_errorCount.constBegin(); it != m_errorCount.constEnd(); ++it)
+        if (it.value() > 0) rankedKeys.append(qMakePair(it.key(), it.value()));
+    std::sort(rankedKeys.begin(), rankedKeys.end(), [](const auto& a, const auto& b) {
+        return a.second > b.second;
+    });
+
+    QSet<QChar> present;
+    for (QChar c : ex.targetText) {
+        if (m_errorCount.value(c, 0) > 0) {
+            present.insert(c);
+            ++m_lastWeakKeyMatchesCount;
         }
-        m_nextIndex = (idxFound+1)%m_bank.size();
-        return selected;
     }
-    // No matching difficulty left – bump to next level
-    if(m_currentDifficulty<3){
-        ++m_currentDifficulty;
-        m_nextIndex=0;
-        return getNextExercise();
+    for (const auto& entry : rankedKeys) {
+        if (present.contains(entry.first)) {
+            m_lastWeakKeysTargeted.append(entry.first);
+            if (m_lastWeakKeysTargeted.size() == 5) break;
+        }
     }
-    // Bank exhausted, generate a dynamic exercise
-    return generateDynamicExercise();
+    m_lastAdaptive = !m_lastWeakKeysTargeted.isEmpty();
+    return m_currentExercise.get();
 }
 
 const Exercise* AdaptiveEngine::generateDynamicExercise()
 {
-    // Gather weak keys
     QList<QChar> weakKeys;
-    for(auto it=m_errorCount.constBegin(); it!=m_errorCount.constEnd(); ++it){
-        if(it.value()>0)
-            weakKeys.append(it.key());
-    }
+    for (auto it = m_errorCount.constBegin(); it != m_errorCount.constEnd(); ++it)
+        if (it.value() > 0) weakKeys.append(it.key());
 
-    QString target;
-    int minSentences = 1, maxSentences = 1;
-    switch(m_currentDifficulty){
-        case 1: minSentences=1; maxSentences=2; break;
-        case 2: minSentences=2; maxSentences=3; break;
-        default: minSentences=3; maxSentences=4; break;
-    }
-
-    // Filter sentences containing weak keys
     QVector<QString> candidates;
-    for(const QString &s : sentenceBank){
-        bool hasWeak=false;
-        for(QChar c:s){
-            if(weakKeys.contains(c)){
-                hasWeak=true;break;
-            }
+    for (const QString& sentence : sentenceBank) {
+        bool matches = weakKeys.isEmpty();
+        for (QChar c : sentence) {
+            if (weakKeys.contains(c)) { matches = true; break; }
         }
-        if(hasWeak || weakKeys.isEmpty()){
-            candidates.append(s);
-        }
+        if (matches) candidates.append(sentence);
     }
+    if (candidates.isEmpty())
+        for (const QString& sentence : sentenceBank) candidates.append(sentence);
+    if (candidates.isEmpty()) return nullptr;
 
-    if(candidates.isEmpty()){
-        candidates = sentenceBank;
-    }
-
-    // Try a bounded number of random combinations. The previous recursive
-    // retry could recurse forever if it repeatedly generated an existing target.
-    const int maxAttempts = 100;
-    bool uniqueTargetFound = false;
-
-    for (int attempt = 0; attempt < maxAttempts && !uniqueTargetFound; ++attempt) {
+    const int minSentences = (m_currentDifficulty == 1) ? 1 : (m_currentDifficulty == 2 ? 2 : 3);
+    const int maxSentences = minSentences + 1;
+    QString target;
+    // Bounded attempts prevent unbounded recursion if combinations repeat.
+    for (int attempt = 0; attempt < 30; ++attempt) {
         target.clear();
         const int count = QRandomGenerator::global()->bounded(minSentences, maxSentences + 1);
-
         for (int i = 0; i < count; ++i) {
-            const QString &sentence = candidates.at(
-                QRandomGenerator::global()->bounded(candidates.size()));
-            if (!target.isEmpty()) target += " ";
-            target += sentence;
+            if (!target.isEmpty()) target += ' ';
+            target += candidates.at(QRandomGenerator::global()->bounded(candidates.size()));
         }
-
-        uniqueTargetFound = !generatedTargets_.contains(target);
+        if (!generatedTargets_.contains(target)) break;
+        target.clear();
     }
-
-    // Deterministic fallback: append a numbered practice marker so generation
-    // always terminates even if all random combinations tried were duplicates.
-    if (!uniqueTargetFound) {
-        const QString base = candidates.first();
-        int fallbackNumber = m_generatedCount + 1;
-        do {
-            target = base + QString(" Practice round %1.").arg(fallbackNumber++);
-        } while (generatedTargets_.contains(target));
+    if (target.isEmpty()) {
+        // Deterministic fallback: select the first unused sentence.
+        for (const QString& sentence : sentenceBank) {
+            if (!generatedTargets_.contains(sentence)) { target = sentence; break; }
+        }
     }
+    if (target.isEmpty()) target = sentenceBank.first();
 
-    Exercise ex;
-    ex.title = QString("Dynamic %1").arg(++m_generatedCount);
-    ex.category = "dynamic";
-    ex.difficulty = m_currentDifficulty;
-    ex.targetText = target;
-
-        // Set debug state
-        m_lastWasDynamic=true;
-        m_lastAdaptive=!weakKeys.isEmpty();
-        // Determine weak keys actually present in the generated target text
-        QSet<QChar> used;
-        for(QChar c : target){
-            if(weakKeys.contains(c) && !used.contains(c)){
-                used.insert(c);
-            }
-        }
-        // Build list of weak key stats sorted by count descending
-        QList<QPair<QChar,int>> wcList;
-        for(auto it=m_errorCount.constBegin(); it!=m_errorCount.constEnd(); ++it){
-            if(it.value()>0)
-                wcList.append(qMakePair(it.key(),it.value()));
-        }
-        std::sort(wcList.begin(),wcList.end(),
-                  [](const QPair<QChar,int>&a,const QPair<QChar,int>&b){return a.second>b.second;});
-        // Determine focus keys: top N (5) weak keys that actually appear in target
-        QVector<QChar> focus;
-        const int maxFocus = 5;
-        for(const auto &p : wcList){
-            if(used.contains(p.first)){
-                focus.append(p.first);
-                if(focus.size() >= maxFocus) break;
-            }
-        }
-        m_lastWeakKeysTargeted = focus;
-    // Count matches in this exercise
-    int matchCount=0;
-    for(QChar c:target){ if(m_errorCount.contains(c) && m_errorCount[c]>0) matchCount++; }
-    m_lastWeakKeyMatchesCount = matchCount;
-
-
-    m_bank.append(ex);
+    Exercise exercise;
+    exercise.title = QString("Dynamic %1").arg(++m_generatedCount);
+    exercise.category = "dynamic";
+    exercise.difficulty = m_currentDifficulty;
+    exercise.targetText = target;
+    m_bank.append(exercise);
     generatedTargets_.insert(target);
-    return &m_bank.last();
+
+    // Dynamic exercises are returned as an owned stable copy.
+    m_currentExercise.reset(new Exercise(exercise));
+    m_lastWasDynamic = true;
+    m_lastAdaptive = !weakKeys.isEmpty();
+    m_lastWeakKeysTargeted.clear();
+    for (auto it = m_errorCount.constBegin(); it != m_errorCount.constEnd(); ++it) {
+        if (it.value() > 0 && target.contains(it.key()) && m_lastWeakKeysTargeted.size() < 5)
+            m_lastWeakKeysTargeted.append(it.key());
+    }
+    m_lastWeakKeyMatchesCount = 0;
+    for (QChar c : target) if (m_errorCount.value(c, 0) > 0) ++m_lastWeakKeyMatchesCount;
+    return m_currentExercise.get();
 }
 
-void AdaptiveEngine::recordErrors(const QVector<QPair<QChar,QChar>>& errors)
+void AdaptiveEngine::recordErrors(const QVector<QPair<QChar, QChar>>& errors)
 {
-    for(const auto& p:errors){
-        QChar expected = p.first;
-        m_errorCount[expected] += 1;
-    }
+    for (const auto& error : errors) ++m_errorCount[error.first];
+}
+
+QStringList AdaptiveEngine::recommendedLearningPath() const
+{
+    QHash<QString, QVector<SkillEdge>> graph;
+    graph["Home Row"] = {{"Top Row", 2}, {"Bottom Row", 3}};
+    graph["Top Row"] = {{"Mixed Text", 2}};
+    graph["Bottom Row"] = {{"Mixed Text", 2}};
+    graph["Mixed Text"] = {{"Accuracy Drills", 1}};
+    graph["Accuracy Drills"] = {{"Timed Practice", 2}};
+    return shortestLearningPath("Home Row", "Timed Practice", graph);
 }

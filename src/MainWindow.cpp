@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <QDebug>
 #include <QSet>
+#include <QHash>
 #include <QTimer>
 #include <cstdlib>
 #include <new>
@@ -70,8 +71,7 @@ MainWindow::MainWindow(QWidget *parent)
     layout->addWidget(typingAreaLabel_);
     layout->addSpacing(12);
     layout->addWidget(resultsLabel_);
-
-    // statusLabel_ is hidden; not added to layout
+    layout->addWidget(statusLabel_);
     layout->addWidget(adaptiveInfoLabel_);
 
     nextButton_ = new QPushButton("Next Exercise", this);
@@ -139,11 +139,6 @@ void MainWindow::onEngineKeyPressed(QKeyEvent* event)
         return;
     }
 
-    // Once an exercise is completed, ignore further input until Next Exercise.
-    if (cursorIndex_ >= currentExercise_->targetText.length()) {
-        return;
-    }
-
     const qint64 now = QDateTime::currentMSecsSinceEpoch();
 
     // Backspace uses the stack to undo the most recent typed character.
@@ -176,6 +171,9 @@ void MainWindow::onEngineKeyPressed(QKeyEvent* event)
         return;
     }
 
+    // Once completed, ignore new text until the next exercise is loaded.
+    if (cursorIndex_ >= currentExercise_->targetText.length()) return;
+
     const QString text = event->text();
     if (text.isEmpty() || cursorIndex_ >= currentExercise_->targetText.length()) {
         return; // ignore non-text keys and input beyond the target
@@ -183,6 +181,7 @@ void MainWindow::onEngineKeyPressed(QKeyEvent* event)
 
     interKeyIntervals_.append(now - lastKeystrokeTimeMs_);
     lastKeystrokeTimeMs_ = now;
+    slidingWpm_.record(now);
 
     const QChar actual = text.at(0);
     const QChar expected = currentExercise_->targetText.at(cursorIndex_);
@@ -213,11 +212,12 @@ void MainWindow::onEngineKeyPressed(QKeyEvent* event)
     }
 
     ++cursorIndex_;
-    statusLabel_->setText(QString("Typed %1/%2 chars. Correct: %3  Incorrect: %4")
+    statusLabel_->setText(QString("Typed %1/%2 | Correct: %3 | Incorrect: %4 | Recent WPM: %5")
                               .arg(cursorIndex_)
                               .arg(currentExercise_->targetText.length())
                               .arg(correctCount_)
-                              .arg(incorrectCount_));
+                              .arg(incorrectCount_)
+                              .arg(slidingWpm_.currentWpm(), 0, 'f', 1));
     updateTypingDisplay();
 
     if (cursorIndex_ >= currentExercise_->targetText.length()) {
@@ -234,8 +234,14 @@ void MainWindow::onEngineKeyPressed(QKeyEvent* event)
             .arg(QString::number(wpm, 'f', 1))
             .arg(elapsedMs / 1000.0, 0, 'g', 2);
 
+        QString typedText;
+        typedText.reserve(typedChars_.size());
+        for (QChar character : typedChars_) typedText.append(character);
+        const int editDistance = levenshteinDistance(typedText, currentExercise_->targetText);
+        const QString editInfo = QString("Edit distance: %1").arg(editDistance);
+
         adaptiveEngine_->recordErrors(errors_);
-        QMap<QChar, int> errMap = adaptiveEngine_->errorCounts();
+        QHash<QChar, int> errMap = adaptiveEngine_->errorCounts();
         QList<QPair<QChar, int>> list;
         for (auto it = errMap.constBegin(); it != errMap.constEnd(); ++it) {
             list.append(qMakePair(it.key(), it.value()));
@@ -248,7 +254,7 @@ void MainWindow::onEngineKeyPressed(QKeyEvent* event)
         for (int i = 0; i < list.size() && i < 5; ++i) {
             weakStr += QString(" %1(%2)").arg(list[i].first).arg(list[i].second);
         }
-        resultsLabel_->setText(result + "\n" + weakStr);
+        resultsLabel_->setText(result + "\n" + editInfo + "\n" + weakStr);
         nextButton_->setEnabled(true);
         updateTypingDisplay();
     }
@@ -282,6 +288,7 @@ void MainWindow::loadNextExercise()
 
     errors_.clear();
     interKeyIntervals_.clear();
+    slidingWpm_.reset();
     typedChars_.clear();
     correctnessFlags_.clear();
     while (!correction_stack_is_empty(correctionStack_)) {
@@ -392,6 +399,10 @@ void MainWindow::loadNextExercise()
     adaptiveInfo +=
         "Difficulty: " +
         diffLabel;
+
+    const QStringList learningPath = adaptiveEngine_->recommendedLearningPath();
+    if (!learningPath.isEmpty())
+        adaptiveInfo += "\nSuggested skill path: " + learningPath.join(" → ");
 
     adaptiveInfoLabel_->setText(
         adaptiveInfo

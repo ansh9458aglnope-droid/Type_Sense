@@ -18,6 +18,7 @@ add_executable(TypeSense
     src/c_ds/exercise_queue.c
     src/c_ds/correction_stack.c
     src/AdaptiveEngine.cpp
+    src/typing_algorithms.cpp
 )
 
 target_include_directories(TypeSense PRIVATE src include)

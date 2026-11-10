@@ -1,47 +1,49 @@
 #pragma once
-
 #include <QString>
+#include <QStringList>
 #include <QVector>
-#include <QMap>
+#include <QHash>
 #include <QSet>
+#include <memory>
+#include "c_ds/exercise_queue.h"
+#include "typing_algorithms.h"
 
 struct Exercise {
     QString title;
-    QString category;   // e.g., "home-row", "top-row"
-    int difficulty;     // 1=easy,2=medium,3=hard
+    QString category;
+    int difficulty = 1;
     QString targetText;
 };
 
 class AdaptiveEngine {
 public:
     AdaptiveEngine();
-    ~AdaptiveEngine() = default;
+    ~AdaptiveEngine();
+    AdaptiveEngine(const AdaptiveEngine&) = delete;
+    AdaptiveEngine& operator=(const AdaptiveEngine&) = delete;
 
-    // Load the next exercise based on current progress and weak keys.
     const Exercise* getNextExercise();
-
-    // Record errors from a finished exercise to update weak key statistics.
-    void recordErrors(const QVector<QPair<QChar,QChar>>& errors);
-
-    // Current difficulty level of last served exercise.
+    void recordErrors(const QVector<QPair<QChar, QChar>>& errors);
     int currentDifficulty() const { return m_currentDifficulty; }
-    const QMap<QChar,int>& errorCounts() const { return m_errorCount; }
-
-    // Get info about the most recently returned exercise.
+    const QHash<QChar, int>& errorCounts() const { return m_errorCount; }
     bool wasLastExerciseDynamic() const { return m_lastWasDynamic; }
     bool wasLastExerciseAdaptive() const { return m_lastAdaptive; }
     QVector<QChar> lastWeakKeysTargeted() const { return m_lastWeakKeysTargeted; }
     int lastWeakKeyMatchesCount() const { return m_lastWeakKeyMatchesCount; }
-
-    // Generate a new dynamic exercise when bank is exhausted.
     const Exercise* generateDynamicExercise();
+    QStringList recommendedLearningPath() const;
+
 private:
+    void enqueueScheduledExercises();
+    int weakKeyScore(const Exercise& exercise) const;
+
     QVector<Exercise> m_bank;
-    QMap<QChar,int> m_errorCount;   // weak key stats across session
-    int m_nextIndex = 0;
-    int m_generatedCount = 0;        // counter for dynamic exercises
-    QSet<QString> generatedTargets_; // avoid duplicates
-    int m_currentDifficulty = 1;      // start with easy
+    QHash<QChar, int> m_errorCount; // hash table: expected key -> error frequency
+    QSet<QString> generatedTargets_;
+    ExerciseQueue* m_queue = nullptr;
+    std::unique_ptr<Exercise> m_currentExercise;
+    int m_generatedCount = 0;
+    int m_currentDifficulty = 1;
     bool m_lastWasDynamic = false;
     bool m_lastAdaptive = false;
     QVector<QChar> m_lastWeakKeysTargeted;

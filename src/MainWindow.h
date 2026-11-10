@@ -7,6 +7,7 @@
 #include <QVector>
 #include <QPair>
 #include "c_ds/correction_stack.h"
+#include "typing_algorithms.h"
 
 class TypingEngine;
 
@@ -49,6 +50,7 @@ QLabel* adaptiveInfoLabel_;
     int correctCount_ = 0;
     int incorrectCount_ = 0;
     QVector<qint64> interKeyIntervals_;
+    SlidingWindowWpm slidingWpm_{10};
     qint64 lastKeystrokeTimeMs_ = 0;
 
    
