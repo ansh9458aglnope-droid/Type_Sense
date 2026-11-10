@@ -254,16 +254,33 @@ const Exercise* AdaptiveEngine::generateDynamicExercise()
         candidates = sentenceBank;
     }
 
-    int count = QRandomGenerator::global()->bounded(minSentences, maxSentences+1);
-    for(int i=0;i<count;++i){
-        const QString &s = candidates.at(QRandomGenerator::global()->bounded(candidates.size()));
-        if(!target.isEmpty()) target += " ";
-        target += s;
+    // Try a bounded number of random combinations. The previous recursive
+    // retry could recurse forever if it repeatedly generated an existing target.
+    const int maxAttempts = 100;
+    bool uniqueTargetFound = false;
+
+    for (int attempt = 0; attempt < maxAttempts && !uniqueTargetFound; ++attempt) {
+        target.clear();
+        const int count = QRandomGenerator::global()->bounded(minSentences, maxSentences + 1);
+
+        for (int i = 0; i < count; ++i) {
+            const QString &sentence = candidates.at(
+                QRandomGenerator::global()->bounded(candidates.size()));
+            if (!target.isEmpty()) target += " ";
+            target += sentence;
+        }
+
+        uniqueTargetFound = !generatedTargets_.contains(target);
     }
 
-    // Avoid duplicate exercises
-    if(generatedTargets_.contains(target)){
-        return generateDynamicExercise();
+    // Deterministic fallback: append a numbered practice marker so generation
+    // always terminates even if all random combinations tried were duplicates.
+    if (!uniqueTargetFound) {
+        const QString base = candidates.first();
+        int fallbackNumber = m_generatedCount + 1;
+        do {
+            target = base + QString(" Practice round %1.").arg(fallbackNumber++);
+        } while (generatedTargets_.contains(target));
     }
 
     Exercise ex;

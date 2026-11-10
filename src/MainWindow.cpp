@@ -9,6 +9,8 @@
 #include <QDebug>
 #include <QSet>
 #include <QTimer>
+#include <cstdlib>
+#include <new>
 
 MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent),
@@ -16,6 +18,11 @@ MainWindow::MainWindow(QWidget *parent)
       adaptiveEngine_(new AdaptiveEngine())
 {
     qDebug() << "[DEBUG] MainWindow constructor started";
+
+    correctionStack_ = correction_stack_create();
+    if (!correctionStack_) {
+        qFatal("Failed to create correction stack");
+    }
 
     setFocusPolicy(Qt::StrongFocus);
 
@@ -109,6 +116,11 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    while (!correction_stack_is_empty(correctionStack_)) {
+        auto* record = static_cast<TypingRecord*>(correction_stack_pop(correctionStack_));
+        delete record;
+    }
+    correction_stack_destroy(correctionStack_);
     delete adaptiveEngine_;
 }
 
@@ -123,208 +135,121 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
 void MainWindow::onEngineKeyPressed(QKeyEvent* event)
 {
-    if (!currentExercise_) {
+    if (!currentExercise_ || !event) {
         return;
     }
 
-    // Guard against processing after completion
+    // Once an exercise is completed, ignore further input until Next Exercise.
     if (cursorIndex_ >= currentExercise_->targetText.length()) {
         return;
     }
 
-    qint64 now = QDateTime::currentMSecsSinceEpoch();
+    const qint64 now = QDateTime::currentMSecsSinceEpoch();
 
-    interKeyIntervals_.append(
-        now - lastKeystrokeTimeMs_
-    );
-
-    lastKeystrokeTimeMs_ = now;
-
-    // Handle backspace separately
+    // Backspace uses the stack to undo the most recent typed character.
     if (event->key() == Qt::Key_Backspace) {
-
-        if (cursorIndex_ > 0) {
-
-            // Remove the last typed character and its correctness flag
-            QChar removed = typedChars_.takeLast();
-
-            bool wasCorrect =
-                correctnessFlags_.takeLast();
-
-            Q_UNUSED(removed);
-
-            if (wasCorrect) {
-                correctCount_--;
-            } else {
-                incorrectCount_--;
+        if (!correction_stack_is_empty(correctionStack_)) {
+            auto* record = static_cast<TypingRecord*>(correction_stack_pop(correctionStack_));
+            if (record) {
+                if (!typedChars_.isEmpty() && !correctnessFlags_.isEmpty() && cursorIndex_ > 0) {
+                    typedChars_.removeLast();
+                    correctnessFlags_.removeLast();
+                    if (record->correct) {
+                        correctCount_ = qMax(0, correctCount_ - 1);
+                    } else {
+                        incorrectCount_ = qMax(0, incorrectCount_ - 1);
+                        if (!errors_.isEmpty()) {
+                            errors_.removeLast();
+                        }
+                    }
+                    --cursorIndex_;
+                }
+                delete record;
             }
-
-            cursorIndex_--;
         }
-
         updateTypingDisplay();
+        statusLabel_->setText(QString("Typed %1/%2 chars. Correct: %3  Incorrect: %4")
+                                  .arg(cursorIndex_)
+                                  .arg(currentExercise_->targetText.length())
+                                  .arg(correctCount_)
+                                  .arg(incorrectCount_));
         return;
     }
 
-    QString text = event->text();
-
-    if (text.isEmpty()) {
-        return; // ignore non-text keys
+    const QString text = event->text();
+    if (text.isEmpty() || cursorIndex_ >= currentExercise_->targetText.length()) {
+        return; // ignore non-text keys and input beyond the target
     }
 
-    QChar actual = text.at(0);
+    interKeyIntervals_.append(now - lastKeystrokeTimeMs_);
+    lastKeystrokeTimeMs_ = now;
 
-    // Record typed character
+    const QChar actual = text.at(0);
+    const QChar expected = currentExercise_->targetText.at(cursorIndex_);
+    const bool isCorrect = (actual == expected);
+
+    // Allocate the history record before modifying typing state.
+    auto* record = new (std::nothrow) TypingRecord{actual, expected, isCorrect};
+    if (!record) {
+        qWarning() << "Could not allocate typing history record";
+        return;
+    }
+    const size_t oldStackSize = correction_stack_size(correctionStack_);
+    correction_stack_push(correctionStack_, record);
+    if (correction_stack_size(correctionStack_) != oldStackSize + 1) {
+        delete record;
+        qWarning() << "Could not push typing history record onto stack";
+        return;
+    }
+
     typedChars_.append(actual);
-
-    bool isCorrect =
-        (
-            cursorIndex_ < currentExercise_->targetText.length() &&
-            actual ==
-                currentExercise_->targetText.at(cursorIndex_)
-        );
-
     correctnessFlags_.append(isCorrect);
 
     if (isCorrect) {
-
-        correctCount_++;
-
+        ++correctCount_;
     } else {
-
-        incorrectCount_++;
-
-        errors_.append(
-            qMakePair(
-                currentExercise_->targetText.at(cursorIndex_),
-                actual
-            )
-        );
+        ++incorrectCount_;
+        errors_.append(qMakePair(expected, actual));
     }
 
-    // Advance regardless of correctness
-    cursorIndex_++;
-
-    statusLabel_->setText(
-        QString(
-            "Typed %1/%2 chars. Correct: %3  Incorrect: %4"
-        )
-        .arg(cursorIndex_)
-        .arg(currentExercise_->targetText.length())
-        .arg(correctCount_)
-        .arg(incorrectCount_)
-    );
-
+    ++cursorIndex_;
+    statusLabel_->setText(QString("Typed %1/%2 chars. Correct: %3  Incorrect: %4")
+                              .arg(cursorIndex_)
+                              .arg(currentExercise_->targetText.length())
+                              .arg(correctCount_)
+                              .arg(incorrectCount_));
     updateTypingDisplay();
 
     if (cursorIndex_ >= currentExercise_->targetText.length()) {
+        const qint64 elapsedMs = now - startTimeMs_;
+        const int totalTyped = correctCount_ + incorrectCount_;
+        const double accuracy = totalTyped > 0 ? (double(correctCount_) / totalTyped) * 100.0 : 0.0;
+        const double wpm = elapsedMs > 0
+            ? ((double(currentExercise_->targetText.length()) / 5.0) / (elapsedMs / 60000.0))
+            : 0.0;
 
-        // Exercise finished
-        qint64 elapsedMs =
-            now - startTimeMs_;
-
-        double accuracy = 0.0;
-
-        int totalTyped =
-            correctCount_ + incorrectCount_;
-
-        if (totalTyped > 0) {
-
-            accuracy =
-                (double)correctCount_ /
-                totalTyped *
-                100.0;
-        }
-
-        double wpm = 0.0;
-
-        if (elapsedMs > 0) {
-
-            wpm =
-                (
-                    (double)
-                    currentExercise_->targetText.length()
-                    / 5.0
-                ) /
-                (elapsedMs / 60000.0);
-        }
-
-        QString result =
-            QString(
-                "Accuracy: %1%%    Errors: %2    WPM: %3    Time: %4s"
-            )
-            .arg(
-                QString::number(
-                    accuracy,
-                    'f',
-                    2
-                )
-            )
+        const QString result = QString("Accuracy: %1%%    Errors: %2    WPM: %3    Time: %4s")
+            .arg(QString::number(accuracy, 'f', 2))
             .arg(incorrectCount_)
-            .arg(
-                QString::number(
-                    wpm,
-                    'f',
-                    1
-                )
-            )
-            .arg(
-                elapsedMs / 1000.0,
-                'g',
-                2
-            );
+            .arg(QString::number(wpm, 'f', 1))
+            .arg(elapsedMs / 1000.0, 0, 'g', 2);
 
         adaptiveEngine_->recordErrors(errors_);
-
-        // Build weak keys string
-        QMap<QChar, int> errMap =
-            adaptiveEngine_->errorCounts();
-
+        QMap<QChar, int> errMap = adaptiveEngine_->errorCounts();
         QList<QPair<QChar, int>> list;
-
-        for (
-            auto it = errMap.constBegin();
-            it != errMap.constEnd();
-            ++it
-        ) {
-            list.append(
-                qMakePair(
-                    it.key(),
-                    it.value()
-                )
-            );
+        for (auto it = errMap.constBegin(); it != errMap.constEnd(); ++it) {
+            list.append(qMakePair(it.key(), it.value()));
         }
-
-        std::sort(
-            list.begin(),
-            list.end(),
-            [](
-                const QPair<QChar, int>& a,
-                const QPair<QChar, int>& b
-            ) {
-                return a.second > b.second;
-            }
-        );
+        std::sort(list.begin(), list.end(), [](const QPair<QChar, int>& a, const QPair<QChar, int>& b) {
+            return a.second > b.second;
+        });
 
         QString weakStr = "Weak keys:";
-
-        for (
-            int i = 0;
-            i < list.size() && i < 5;
-            i++
-        ) {
-            weakStr +=
-                QString(" %1(%2)")
-                    .arg(list[i].first)
-                    .arg(list[i].second);
+        for (int i = 0; i < list.size() && i < 5; ++i) {
+            weakStr += QString(" %1(%2)").arg(list[i].first).arg(list[i].second);
         }
-
-        resultsLabel_->setText(
-            result + "\n" + weakStr
-        );
-
+        resultsLabel_->setText(result + "\n" + weakStr);
         nextButton_->setEnabled(true);
-
         updateTypingDisplay();
     }
 }
@@ -359,6 +284,12 @@ void MainWindow::loadNextExercise()
     interKeyIntervals_.clear();
     typedChars_.clear();
     correctnessFlags_.clear();
+    while (!correction_stack_is_empty(correctionStack_)) {
+        auto* record = static_cast<TypingRecord*>(correction_stack_pop(correctionStack_));
+        delete record;
+    }
+    resultsLabel_->clear();
+    nextButton_->setEnabled(false);
 
     updateTypingDisplay();
 

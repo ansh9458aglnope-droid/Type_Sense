@@ -6,6 +6,7 @@
 #include <QPushButton>
 #include <QVector>
 #include <QPair>
+#include "c_ds/correction_stack.h"
 
 class TypingEngine;
 
@@ -24,6 +25,13 @@ private slots:
     void loadNextExercise();
 
 private:
+    struct TypingRecord {
+        QChar actual;
+        QChar expected;
+        bool correct;
+    };
+
+    CorrectionStack* correctionStack_ = nullptr;
     TypingEngine* engine_;
     AdaptiveEngine* adaptiveEngine_;
     void updateTypingDisplay();
